@@ -1,0 +1,2 @@
+Compile c++ opencv
+g++ -std=c++11 readimage.cpp `pkg-config --libs --cflags opencv` -o readimg

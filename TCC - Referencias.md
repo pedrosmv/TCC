@@ -7,12 +7,13 @@ https://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeli
 https://bytefish.de/blog/machine_learning_opencv/
 ## MLP – OpenCV
 http://www.swarthmore.edu/NatSci/mzucker1/opencv-2.4.10-docs/modules/ml/doc/neural_networks.html
+http://areshopencv.blogspot.com.br/2011/07/artificial-intelligence-multilayered.html
 
 # OpenCV
 https://stackoverflow.com/questions/22056737/opencv-stitching-images-from-a-grid-of-images
 http://docs.opencv.org/3.2.0/d8/d19/tutorial_stitcher.html
 
 # Sprinkler
-## Controle de fluxo de agua 
+## Controle de fluxo de agua
 http://www.instructables.com/id/Pinch-Valve/
 http://www.instructables.com/id/Single-Servo-Robotic-Gripper/
