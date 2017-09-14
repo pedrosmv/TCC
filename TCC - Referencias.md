@@ -9,6 +9,8 @@ https://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeli
 
 https://bytefish.de/blog/machine_learning_opencv/
 
+https://www.youtube.com/watch?v=LDRbO9a6XPU
+
 ## MLP – OpenCV
 http://www.swarthmore.edu/NatSci/mzucker1/opencv-2.4.10-docs/modules/ml/doc/neural_networks.html
 
