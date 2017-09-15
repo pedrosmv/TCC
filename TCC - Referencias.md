@@ -11,6 +11,8 @@ https://bytefish.de/blog/machine_learning_opencv/
 
 https://www.youtube.com/watch?v=LDRbO9a6XPU
 
+http://breckon.eu/toby/teaching/ml/examples/c++/speech_ex/decisiontree.cpp
+
 ## MLP – OpenCV
 http://www.swarthmore.edu/NatSci/mzucker1/opencv-2.4.10-docs/modules/ml/doc/neural_networks.html
 
