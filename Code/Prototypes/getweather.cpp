@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <string>
 #include <stdlib.h>
+#include <boost/regex.hpp>
+#include <regex>
 
 using namespace std;
 
@@ -13,11 +15,36 @@ float calculate_coefficient(int weather[], float rain[]){
     coefficient = coefficient + (weather[i] * (1 -(rain[i]/100)));
   }
 
-  return coefficient;
+  return coefficient/39;
+}
+
+void find_wind(){
+  int i;
+  string stream;
+
+  ifstream file("weather.txt");
+  stream.assign( (istreambuf_iterator<char>(file)),
+                (istreambuf_iterator<char>()));
+
+  const string s = stream;
+  boost::regex expr{"[0-9]{1,2}[0-9]{1,2}"};
+  boost::smatch match;
+
+  if(boost::regex_match(s, expr)){
+    cout << "Nice";
+  }
+
+  for(i=0; i < 12; i++){
+    if (boost::regex_search(s, match, expr))
+        cout << "match: " << match[i] << '\n';
+  }
+  file.close();
 }
 
 int main(){
   string stream;
+  string s;
+  const string parameter = s;
   int i=0;
   int j=0;
   int nclear = 0;
@@ -29,8 +56,12 @@ int main(){
   int weather_coefficient[12];
   float rain_percentage[12];
   float coefficient;
-
   system("curl wttr.in/'London' > weather.txt");
+
+
+
+  find_wind();
+
   ifstream weather("weather.txt");
   rain_percentage[0] = 0.0;
   /* This loop will parse the file where the weather report is saved and for every
@@ -56,7 +87,12 @@ int main(){
     }
     size_t clear = stream.find("Clear", 0);
     if(clear != string::npos)
-    {
+    {size_t wind = stream.find(" - km/h");
+    if(wind != string::npos){
+      // int aux;
+      // aux = stoi(stream);
+      cout << stream << " ";
+    }
       nclear++;
       weather_coefficient[j] = 2;
       j++;
@@ -85,7 +121,12 @@ int main(){
     cloudy = stream.find("cloudy", 0);
     if(cloudy != string::npos)
     {
-      ncloudy++;
+      ncloudy++;size_t wind = stream.find(" - km/h");
+    if(wind != string::npos){
+      // int aux;
+      // aux = stoi(stream);
+      cout << stream << " ";
+    }
       weather_coefficient[j] = 1;
       j++;
     }
@@ -115,6 +156,7 @@ int main(){
   coefficient = calculate_coefficient(weather_coefficient, rain_percentage);
 
   cout << coefficient;
+
   weather.close();
   return 0;
 }
