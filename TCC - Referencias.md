@@ -34,3 +34,8 @@ http://www.geeksforgeeks.org/stitching-input-images-panorama-using-opencv-c/
 http://www.instructables.com/id/Pinch-Valve/
 
 http://www.instructables.com/id/Single-Servo-Robotic-Gripper/
+
+# Wind and Plants
+http://agritech.tnau.ac.in/agriculture/agri_agrometeorology_wind.html
+
+http://www.montana.edu/cpa/news/wwwpb-archives/ag/baudr258.html
