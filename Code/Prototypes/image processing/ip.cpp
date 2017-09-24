@@ -12,6 +12,7 @@ struct range{
   Scalar max;
 };
 
+/* Essa struct representa um bloco da imagem, sendo que a variavel regado diz se ele precisa ser regado ou nao */
 struct map_block{
   int x;
   int y;
@@ -41,7 +42,9 @@ Mat calculateAvgPxlColor(Mat final_field, int canvas_dimensions, int canvas_row,
 
   /* Returns a zero array of the specified size and type. */
   squared_field = Mat::zeros(n_rows, n_cols, CV_8UC3);
-
+  
+  /* Esse loop vai iterar sobre o vetor dos canais de cores da imagem e pegar a media de imagem duma area retangular e transformar 
+      todos os pixels dentro daquela area na cor media */
   while(square_numbers < canvas_row*canvas_col){
     avg_color = 0;
     blue_color = 0;
@@ -86,8 +89,8 @@ Mat calculateAvgPxlColor(Mat final_field, int canvas_dimensions, int canvas_row,
 Mat apply_mask(Mat squared_field, range rgb_limits){
   Mat int_mask, final_mask;
 
-  /* A mascara intermediaria separa os quadrados com grama que precisam ser regadas */
-  inRange(squared_field, rgb_limits.min, rgb_limits.max, int_mask);
+  
+  inRange(squared_field, rgb_limits.min, rgb_limits.max, int_mask); /* A mascara intermediaria separa os quadrados com grama que precisam ser regadas */
   squared_field.copyTo(final_mask, int_mask); /* A mascara final recebe os pixels que não são preto na imagem da primeira mascara */
 
   return final_mask;
@@ -173,7 +176,7 @@ int main(int argc, char** argv){
     canvas_col = (field.cols/canvas_dimensions) + 1;
   }
 
-  /* Pre-processing image */
+  /* Pre-processamento da imagem */
   blur(field, field, Size(2,2)); /* Blurs an image using the normalized box filter. */
   cvtColor(field, hsv_field, CV_BGR2HSV); /* Converts an image from one color space to another. BGR -> HSV */
   inRange(hsv_field, field_range.min, field_range.max, field_treshold);
@@ -198,7 +201,7 @@ int main(int argc, char** argv){
 
   field.copyTo(final_field, field_treshold);
 
-
+  /* Processamento da imagem para encontrar as areas que precisam ser regadas */
   squared_field = calculateAvgPxlColor(final_field, canvas_dimensions, canvas_row, canvas_col, black_pixel_maximum);
   mask_field = apply_mask(squared_field,rgb_limits);
   mapUnhelthyGrass(squared_field, mask_field, canvas_dimensions, canvas_row, canvas_col, block_size, mapBlock);
