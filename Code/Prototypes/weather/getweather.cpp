@@ -121,7 +121,7 @@ int main(){
     cloudy = stream.find("cloudy", 0);
     if(cloudy != string::npos)
     {
-      ncloudy++;size_t wind = stream.find(" - km/h");
+      ncloudy++;
     if(wind != string::npos){
       // int aux;
       // aux = stoi(stream);

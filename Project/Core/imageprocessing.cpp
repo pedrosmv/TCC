@@ -1,30 +1,42 @@
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
-#include <opencv2/opencv.hpp>
-#include <opencv2/highgui/highgui.hpp>
+#include "opencv2/imgcodecs.hpp"
+#include "opencv2/highgui.hpp"
+#include "opencv2/stitching.hpp"
+#include "imageprocessing.h"
 
 using namespace std;
 using namespace cv;
 
-struct range{
-  Scalar min;
-  Scalar max;
-};
+Mat stich(int argc, char** argv){
+  int i;
+  vector<Mat> imgs;
+  string result_name = "field.jpg";
 
-/* Essa struct representa um bloco da imagem, sendo que a variavel regado diz se ele precisa ser regado ou nao */
-struct map_block{
-  int x;
-  int y;
-  bool regado = false;
-  int block_numx;
-  int block_numy;
-};
+  for(i = 1; i < argc; ++i){
+    Mat img = imread(argv[i]);
+    if (img.empty())
+     {
+         // Exit if image is not present
+         cout << "Can't read image '" << argv[i] << "'\n";
+     }
+    imgs.push_back(img);
 
-struct block{
-  int x;
-  int y;
-};
+  }
+
+  Mat pano;
+  Stitcher stitcher = Stitcher::createDefault(false);
+  stitcher.setPanoConfidenceThresh(0.6);
+  Stitcher::Status status = stitcher.stitch(imgs, pano);
+  if (status != Stitcher::OK)
+    {
+        cout << "Can't stitch images, error code = " << int(status) << endl;
+    }
+  imwrite(result_name, pano);
+
+  return pano;
+}
 
 Mat calculateAvgPxlColor(Mat final_field, int canvas_dimensions, int canvas_row, int canvas_col, int black_pixel_maximum){
   Mat squared_field;
@@ -129,10 +141,8 @@ void mapUnhelthyGrass(Mat field, Mat field_mask, int canvas_dimensions, int canv
   }
 }
 
-int main(int argc, char** argv){
-
+vector<map_block> image_processing(Mat field){
   /* Canvases that are going to be used */
-  Mat field = imread(argv[1], 1);
   Mat hsv_field; /* hsv_field vai receber a imagem passada por parametro após o seu color space ser convertido */
   Mat field_treshold; /* field_treshold vai receber um array com um treshold baseado nos ranges que foram passados */
   Mat element;
@@ -209,4 +219,6 @@ int main(int argc, char** argv){
   imwrite("final.jpg", squared_field);
   imwrite("mask.jpg", mask_field);
   field.release();
+
+  return mapBlock;
 }
