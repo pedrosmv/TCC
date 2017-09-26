@@ -20,7 +20,7 @@ struct map_block{
   bool regado = false;
   int block_numx;
   int block_numy;
-  int qtd_agua = 0;
+  float res_anterior;
 };
 
 struct block{

@@ -139,23 +139,16 @@ int get_cor(bool regado){
   return 0;
 }
 
-float resultadoAnterior(){
-  srand (time(NULL));
-  float resultado;
 
-  resultado = rand() % 100;
-  cout << "Resultado anterior:" <<resultado << endl;
-  return resultado;
-}
 
-void get_parameters(parameters* p, bool regado, float coeficiente){
-  p->vento = get_vento();
-  p->corGrama = get_cor(regado);
-  p->insolacao = get_insolacao();
-  p->umidade = get_umidade();
-  p->coeficienteChuva = coeficiente;
-  p->resultadoAnterior = resultadoAnterior();
-}
+// void get_parameters(parameters* p, bool regado, float coeficiente){
+//   p->vento = get_vento();
+//   p->corGrama = get_cor(regado);
+//   p->insolacao = get_insolacao();
+//   p->umidade = get_umidade();
+//   p->coeficienteChuva = coeficiente;
+//   p->resultadoAnterior = resultadoAnterior();
+// }
 
 float formula(parameters p ){
   float result;
@@ -167,18 +160,17 @@ float formula(parameters p ){
   return result;
 }
 
-int state_machine(bool regado, float coeficiente){
+int state_machine(parameters param_dia){
   enum estado estado_atual = INICIAL;
   float decisao;
   int qtd_agua;
-  parameters param_dia;
 
   while(estado_atual != FIM){
 
     switch(estado_atual){
       case INICIAL:
 
-      decisao = 100 * coeficiente;
+      decisao = 100 * param_dia.coeficienteChuva;
 
       if (decisao > 10){
         estado_atual = CALC;
@@ -189,7 +181,6 @@ int state_machine(bool regado, float coeficiente){
       break;
 
       case CALC:
-        get_parameters(&param_dia, regado, coeficiente);
         decisao = formula(param_dia);
         cout << "Decisão:"<< decisao << endl;
         // salva resultado em arquivo
@@ -240,4 +231,32 @@ int state_machine(bool regado, float coeficiente){
 
 void rega(int quantidade_agua){
   cout << "A area selecionada foi regada em " << quantidade_agua << "% " << endl;
+}
+
+void save_resAnterior(vector<block_result> resultados, ofstream &output){
+  vector<block_result>::iterator itr;
+
+  output.open("resAnterior", ios::app);
+  for (itr = resultados.begin(); itr != resultados.end(); itr++){
+    output << (*itr).x << " " << (*itr).y << " " << (*itr).qtd_agua << endl;
+  }
+  output << " ";
+  output.close();
+}
+
+int get_resAnterior(int x, int y, ifstream &input){
+  int res_x, res_y, qtd_agua;
+  input.open("resAnterior");
+  string line;
+  while ( getline (input,line) )
+  {
+    istringstream resultado(line);
+    resultado >> res_x >> res_y >> qtd_agua;
+    if(res_x == x && res_y == y){
+      input.close();
+      return qtd_agua;
+    }
+  }
+  input.close();
+  return 0;
 }

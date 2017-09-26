@@ -27,7 +27,7 @@ void find_wind(){
                 (istreambuf_iterator<char>()));
 
   const string s = stream;
-  boost::regex expr{"[0-9]{1,2}[0-9]{1,2}"};
+  boost::regex expr{"([0-9]{1,2})-([0-9]{1,2})"};
   boost::smatch match;
 
   if(boost::regex_match(s, expr)){
@@ -87,12 +87,7 @@ int main(){
     }
     size_t clear = stream.find("Clear", 0);
     if(clear != string::npos)
-    {size_t wind = stream.find(" - km/h");
-    if(wind != string::npos){
-      // int aux;
-      // aux = stoi(stream);
-      cout << stream << " ";
-    }
+    {
       nclear++;
       weather_coefficient[j] = 2;
       j++;
@@ -122,11 +117,6 @@ int main(){
     if(cloudy != string::npos)
     {
       ncloudy++;
-    if(wind != string::npos){
-      // int aux;
-      // aux = stoi(stream);
-      cout << stream << " ";
-    }
       weather_coefficient[j] = 1;
       j++;
     }
@@ -154,8 +144,6 @@ int main(){
     }
   }
   coefficient = calculate_coefficient(weather_coefficient, rain_percentage);
-
-  cout << coefficient;
 
   weather.close();
   return 0;
