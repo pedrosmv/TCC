@@ -182,7 +182,6 @@ int state_machine(parameters param_dia){
 
       case CALC:
         decisao = formula(param_dia);
-        cout << "Decisão:"<< decisao << endl;
         // salva resultado em arquivo
         if(decisao > 70){
           estado_atual = REGA100;
