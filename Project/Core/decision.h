@@ -6,18 +6,18 @@
 using namespace std;
 
 struct parameters {
-  int corGrama;
-  int vento;
-  int insolacao;
-  int umidade;
-  float coeficienteChuva;
-  float resultadoAnterior;
+        int corGrama;
+        int vento;
+        int insolacao;
+        int umidade;
+        float coeficienteChuva;
+        float resultadoAnterior;
 };
 
-struct block_result{
-  int x;
-  int y;
-  int qtd_agua;
+struct block_result {
+        int x;
+        int y;
+        int qtd_agua;
 };
 
 enum estado {INICIAL, NAOREGA, CALC, REGA100, REGA70, REGA40, FIM};

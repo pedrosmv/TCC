@@ -9,14 +9,14 @@ int main(){
     return -1;
   }
 
-  Mat canvas;
-  namedWindow("canvas", 1);
+  Mat square;
+  namedWindow("square", 1);
 
   while (true){
     Mat frame;
     cap >> frame;
-    cvtColor(frame, canvas, COLOR_BGR2GRAY);
-    imshow("canvas", canvas);
+    cvtColor(frame, square, COLOR_BGR2GRAY);
+    imshow("square", square);
     if (waitKey(30) >= 0){
       break;
     }

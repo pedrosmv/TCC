@@ -29,9 +29,9 @@ struct block{
 };
 
 Mat stich(int argc, char** argv);
-Mat calculateAvgPxlColor(Mat final_field, int canvas_dimensions, int canvas_row, int canvas_col, int black_pixel_maximum);
+Mat calculateAvgPxlColor(Mat final_field, int square_dimensions, int square_row, int square_col, int black_pixel_maximum);
 Mat apply_mask(Mat squared_field, range rgb_limits);
-void mapUnhelthyGrass(Mat field, Mat field_mask, int canvas_dimensions, int canvas_row, int canvas_col, int block_size, vector<map_block> &mapBlock);
+void mapUnhelthyGrass(Mat field, Mat field_mask, int square_dimensions, int square_row, int square_col, int block_size, vector<map_block> &mapBlock);
 vector<map_block> image_processing(Mat field);
 
 #endif
