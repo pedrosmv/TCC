@@ -1,2 +1,9 @@
 Compile c++ opencv
 g++ -std=c++11 readimage.cpp `pkg-config --libs --cflags opencv` -o readimg
+
+Compile c++ boost
+g++ $(pkg-config --cflags opencv) getweather.cpp $(pkg-config --libs opencv) -o core -std=c++11 -lboost_regex
+
+compile program c++
+
+||
