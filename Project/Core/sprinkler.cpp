@@ -49,8 +49,8 @@ vector<sprinkler> set_sprinklers(int max_col, int max_row, int raio){
         int n_sprinklers_x;
         int n_sprinklers_y;
 
-        n_sprinklers_x = 2*(max_col + 1)/(raio*2);
-        n_sprinklers_y = 2*(max_row + 1)/(raio*2);
+        n_sprinklers_x = floor(2*((max_col + 1)/(raio*2)));
+        n_sprinklers_y = floor(2*((max_row + 1)/(raio*2)));
 
         for(int i=0; i<n_sprinklers_x; i++) {
                 sprinklers.push_back(sprinkler());

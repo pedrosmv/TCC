@@ -141,7 +141,7 @@ void mapUnhelthyGrass(Mat field, Mat field_mask, int square_dimensions, int squa
         }
 }
 
-vector<map_block> image_processing(Mat field){
+vector<map_block> image_processing(Mat field, int &max_col, int &max_row){
         /* squarees that are going to be used */
         Mat hsv_field; /* hsv_field vai receber a imagem passada por parametro após o seu color space ser convertido */
         Mat field_treshold; /* field_treshold vai receber um array com um treshold baseado nos ranges que foram passados */

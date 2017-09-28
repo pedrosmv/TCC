@@ -15,6 +15,8 @@ using namespace cv;
 int main(int argc, char *argv[]) {
         int i= 0;
         float coeficiente;
+        int max_row, max_col;
+        int raio;
         float scalar;
         int qtd_agua;
         int vento, umidade, insolacao;
@@ -28,6 +30,9 @@ int main(int argc, char *argv[]) {
         vector<jato> jatos;
         vector<sprinkler> sprinklers;
 
+        cout << "Entre a distancia max do sprinkler: " << endl;
+        cin >> raio;
+
 
         /* --- Variaveis de decisao */
         coeficiente = parse_weather();
@@ -38,10 +43,10 @@ int main(int argc, char *argv[]) {
         /* Processamento de imagem */
         // field = stich(argc, argv);
         field = imread("field.jpg");
-        grass_blocks = image_processing(field);
+        grass_blocks = image_processing(field, max_col, max_row);
         final_field = imread("final.jpg");
 
-        sprinklers = set_sprinklers(5, 3, 2);
+        sprinklers = set_sprinklers(max_col, max_row, raio);
         // for (i=0; i<4; i++) {
         //         cout << sprinklers[i].x  << endl;
         //         cout << sprinklers[i].y << endl;
