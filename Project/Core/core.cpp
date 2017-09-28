@@ -15,6 +15,8 @@ using namespace cv;
 int main(int argc, char *argv[]) {
         int i= 0;
         float coeficiente;
+        int max_x;
+        int max_y;
         float scalar;
         int qtd_agua;
         int vento, umidade, insolacao;
@@ -38,7 +40,7 @@ int main(int argc, char *argv[]) {
         /* Processamento de imagem */
         // field = stich(argc, argv);
         field = imread("field.jpg");
-        grass_blocks = image_processing(field);
+        grass_blocks = main_image(field, max_y, max_x);
         final_field = imread("final.jpg");
 
         sprinklers = read_sprinklers();
@@ -62,24 +64,12 @@ int main(int argc, char *argv[]) {
                 circle(final_field, Point((*it).x, (*it).y), 10, Scalar(scalar, 0, 0), -1, 8);
 
                 resultados.push_back(block_result());
-                resultados[i].x = (*it).block_numx;
-                resultados[i].y = (*it).block_numy;
+                // resultados[i].x = (*it).block_numx;
+                // resultados[i].y = (*it).block_numy;
                 resultados[i].qtd_agua = qtd_agua;
 
                 jatos.push_back(get_jato(sprinklers, (*it)));
-                cout << endl;
-                cout << "Sprinkler: "  << endl;
-                if(jatos[i].orientacao == ESQUERDA)
-                        cout << "Esquerda " << endl;
-                if(jatos[i].orientacao == DIREITA)
-                        cout << "Direita " << endl;
-                if(jatos[i].orientacao == CIMA)
-                        cout << "Cima " << endl;
-                if(jatos[i].orientacao == BAIXO)
-                        cout << "Baixo " << endl;
 
-                cout << "Distancia: " << jatos[i].distancia << endl;
-                cout << "Angulo: " << jatos[i].angle << endl;
                 i++;
         }
 

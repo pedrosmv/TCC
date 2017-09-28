@@ -141,7 +141,8 @@ void mapUnhelthyGrass(Mat field, Mat field_mask, int square_dimensions, int squa
         }
 }
 
-vector<map_block> image_processing(Mat field){
+
+vector<map_block> main_image(Mat field, int &max_y, int &max_x){
         /* squarees that are going to be used */
         Mat hsv_field; /* hsv_field vai receber a imagem passada por parametro após o seu color space ser convertido */
         Mat field_treshold; /* field_treshold vai receber um array com um treshold baseado nos ranges que foram passados */
@@ -168,23 +169,17 @@ vector<map_block> image_processing(Mat field){
         /* Numerical values */
         int bound_min, bound_max;
         int i, j, aux;
-        int square_dimensions, square_row, square_col;
+        int square_dimensions, square_row, square_col; /* Valores do quadradinho */
         int black_pixel_maximum;
         int block_size;
 
-        square_dimensions = 100;
-        block_size = square_dimensions*5;
+        square_dimensions = 100; /* Tamanho do quadradinho */
+        block_size = square_dimensions*5; /* Quantos quadradinhos tem em um bloco */
         black_pixel_maximum = square_dimensions*square_dimensions*0.6;
         square_row = field.rows/square_dimensions;
         square_col = field.cols/square_dimensions;
-
-        if(field.rows % square_dimensions) {
-                square_row = (field.rows/square_dimensions) + 1;
-        }
-
-        if(field.cols % square_dimensions) {
-                square_col = (field.cols/square_dimensions) + 1;
-        }
+        max_y = square_row;
+        max_x = square_col;
 
         /* Pre-processamento da imagem */
         blur(field, field, Size(2,2)); /* Blurs an image using the normalized box filter. */

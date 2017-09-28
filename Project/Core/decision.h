@@ -2,7 +2,11 @@
 #define DECISION_H
 
 #include <stdio.h>
-#include "imageprocessing.h"
+#include <stdlib.h>
+#include <vector>
+#include <iostream>
+#include <fstream>
+
 using namespace std;
 
 struct parameters {

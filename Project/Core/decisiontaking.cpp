@@ -218,7 +218,7 @@ int state_machine(parameters param_dia){
 }
 
 void rega(int quantidade_agua){
-        cout << "A area selecionada foi regada em " << quantidade_agua << "% " << endl;
+        // cout << "A area selecionada foi regada em " << quantidade_agua << "% " << endl;
 }
 
 void save_resAnterior(vector<block_result> resultados, ofstream &output){
