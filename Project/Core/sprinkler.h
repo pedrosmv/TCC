@@ -24,5 +24,6 @@ jato get_jato(vector<sprinkler> sprinklers, map_block grass_block);
 int angulo (float xa, float xb, float ya, float yb);
 float distancia (float xa, float xb, float ya, float yb);
 vector<sprinkler> read_sprinklers();
+vector<sprinkler> set_sprinklers(int max_col, int max_row, int raio);
 
 #endif

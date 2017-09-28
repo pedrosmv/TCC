@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
         grass_blocks = image_processing(field);
         final_field = imread("final.jpg");
 
-        sprinklers = read_sprinklers();
+        sprinklers = set_sprinklers(5, 3, 2);
         // for (i=0; i<4; i++) {
         //         cout << sprinklers[i].x  << endl;
         //         cout << sprinklers[i].y << endl;
