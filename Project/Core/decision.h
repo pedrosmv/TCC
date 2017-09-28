@@ -29,7 +29,7 @@ float parse_weather();
 int get_vento();
 int get_umidade();
 int get_insolacao();
-int get_cor(bool regado);
+int get_cor(bool regado, float dif_cor);
 float resultadoAnterior();
 // void get_parameters(parameters* p, bool regado, float coeficiente);
 float formula(parameters p );

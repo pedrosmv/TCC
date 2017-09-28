@@ -129,10 +129,10 @@ int get_insolacao(){
         return insolacao;
 }
 
-int get_cor(bool regado){
+int get_cor(bool regado, float dif_cor){
 
         if(regado) {
-                return 80;
+                return 80*((dif_cor/142)); /* 155 é a diferença maxima entre a grama boa e grama ruim */
         }
 
         return 0;

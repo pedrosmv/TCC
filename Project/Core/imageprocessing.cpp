@@ -108,9 +108,20 @@ Mat apply_mask(Mat squared_field, range rgb_limits){
         return final_mask;
 }
 
+float calc_dif_cor(int blue, int green, int red, range rgb_limits){
+        float vetor_dif[3];
+        float dif;
+        vetor_dif[0] = rgb_limits.min[0] - blue;
+        vetor_dif[1] = rgb_limits.min[1] - green;
+        vetor_dif[2] = rgb_limits.min[2] - red;
+
+        return dif = sqrt(pow(vetor_dif[0], 2) + pow(vetor_dif[1], 2) + pow(vetor_dif[2], 2));
+}
+
 /* mapUnhelthyGrass vai mapear os quadrados que precisam ser regados e colocar a posição dos quadrados num vetor de structs */
-void mapUnhelthyGrass(Mat field, Mat field_mask, int square_dimensions, int square_row, int square_col, int block_size, vector<map_block> &mapBlock){
+void mapUnhelthyGrass(Mat field, Mat field_mask, int square_dimensions, int square_row, int square_col, int block_size, vector<map_block> &mapBlock, range rgb_limits){
         int x, y, row, col, i, number_square;
+        int r, g, b;
         x = square_dimensions/2;
         y = square_dimensions/2;
         i = 0;
@@ -126,9 +137,13 @@ void mapUnhelthyGrass(Mat field, Mat field_mask, int square_dimensions, int squa
                                                 mapBlock[i].x = x;
                                                 mapBlock[i].y = y;
                                                 mapBlock[i].regado = true;
+                                                b = field.at<Vec3b>(y, x)[0];
+                                                g = field.at<Vec3b>(y, x)[1];
+                                                r = field.at<Vec3b>(y, x)[2];
                                                 mapBlock[i].block_numx = (x/(block_size));
                                                 mapBlock[i].block_numy = (y/(block_size));
                                                 // circle(field, Point(x, y), 10, Scalar(255, 0, 0), -1, 8);
+                                                mapBlock[i].dif_cor = calc_dif_cor(b, g, r, rgb_limits);
                                                 i++;
                                         }
                                 }
@@ -214,7 +229,7 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_row){
         /* Processamento da imagem para encontrar as areas que precisam ser regadas */
         squared_field = calculateAvgPxlColor(final_field, square_dimensions, square_row, square_col, black_pixel_maximum);
         mask_field = apply_mask(squared_field,rgb_limits);
-        mapUnhelthyGrass(squared_field, mask_field, square_dimensions, square_row, square_col, block_size, mapBlock);
+        mapUnhelthyGrass(squared_field, mask_field, square_dimensions, square_row, square_col, block_size, mapBlock, rgb_limits);
 
         imwrite("final.jpg", squared_field);
         imwrite("mask.jpg", mask_field);

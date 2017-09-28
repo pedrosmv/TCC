@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
                 p.vento = vento;
                 p.insolacao = insolacao;
                 p.resultadoAnterior = get_resAnterior((*it).block_numx, (*it).block_numy, input);
-                p.corGrama = get_cor((*it).regado);
+                p.corGrama = get_cor((*it).regado, (*it).dif_cor);
                 qtd_agua = state_machine(p);
 
                 scalar = 255*qtd_agua/100;
@@ -70,21 +70,21 @@ int main(int argc, char *argv[]) {
                 resultados[i].x = (*it).block_numx;
                 resultados[i].y = (*it).block_numy;
                 resultados[i].qtd_agua = qtd_agua;
-
-                jatos.push_back(get_jato(sprinklers, (*it)));
-                cout << endl;
-                cout << "Sprinkler: "  << endl;
-                if(jatos[i].orientacao == ESQUERDA)
-                        cout << "Esquerda " << endl;
-                if(jatos[i].orientacao == DIREITA)
-                        cout << "Direita " << endl;
-                if(jatos[i].orientacao == CIMA)
-                        cout << "Cima " << endl;
-                if(jatos[i].orientacao == BAIXO)
-                        cout << "Baixo " << endl;
-
-                cout << "Distancia: " << jatos[i].distancia << endl;
-                cout << "Angulo: " << jatos[i].angle << endl;
+                cout << (*it).dif_cor << endl;
+                jatos.push_back(get_jato(sprinklers, (*it), max_row, max_col));
+                // cout << endl;
+                // cout << "Sprinkler: "  << endl;
+                // if(jatos[i].orientacao == ESQUERDA)
+                //         cout << "Esquerda " << endl;
+                // if(jatos[i].orientacao == DIREITA)
+                //         cout << "Direita " << endl;
+                // if(jatos[i].orientacao == CIMA)
+                //         cout << "Cima " << endl;
+                // if(jatos[i].orientacao == BAIXO)
+                //         cout << "Baixo " << endl;
+                //
+                // cout << "Distancia: " << jatos[i].distancia << endl;
+                // cout << "Angulo: " << jatos[i].angle << endl;
                 i++;
         }
 
