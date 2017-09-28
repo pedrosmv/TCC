@@ -193,13 +193,13 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_row){
         square_row = field.rows/square_dimensions;
         square_col = field.cols/square_dimensions;
 
-        if(field.rows % square_dimensions) {
-                square_row = (field.rows/square_dimensions) + 1;
-        }
+//         if(field.rows % square_dimensions) {
+//                 square_row = (field.rows/square_dimensions) + 1;
+//         }
 
-        if(field.cols % square_dimensions) {
-                square_col = (field.cols/square_dimensions) + 1;
-        }
+//         if(field.cols % square_dimensions) {
+//                 square_col = (field.cols/square_dimensions) + 1;
+//         }
 
         /* Pre-processamento da imagem */
         blur(field, field, Size(2,2)); /* Blurs an image using the normalized box filter. */
