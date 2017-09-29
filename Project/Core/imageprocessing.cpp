@@ -9,6 +9,8 @@
 using namespace std;
 using namespace cv;
 
+/* Recebe duas imagens por argumento e junta as duas numa panoramica que representa
+   a area a ser regada */
 Mat stich(int argc, char** argv){
         int i;
         vector<Mat> imgs;
@@ -38,6 +40,8 @@ Mat stich(int argc, char** argv){
         return pano;
 }
 
+/* Calcula a media da cor dos pixels numa area quadrada e pinta todos os pixels
+   dentro dessa mesma area com a mesma cor */
 Mat calculateAvgPxlColor(Mat final_field, int square_dimensions, int square_row, int square_col, int black_pixel_maximum){
         Mat squared_field;
 
@@ -98,6 +102,8 @@ Mat calculateAvgPxlColor(Mat final_field, int square_dimensions, int square_row,
         return squared_field;
 }
 
+/* Recebe a imagem pre processada e vai separar os quadrados que precisam ser
+   regados ou nao */
 Mat apply_mask(Mat squared_field, range rgb_limits){
         Mat int_mask, final_mask;
 
@@ -108,6 +114,9 @@ Mat apply_mask(Mat squared_field, range rgb_limits){
         return final_mask;
 }
 
+/* Para cada bloco, e calculada a diferenca entre sua cor e o limite para a
+   area ser considerada saudavel, essa diferenca infere na quantidade de agua que
+   vai ser gasta para regar a area */
 float calc_dif_cor(int blue, int green, int red, range rgb_limits){
         float vetor_dif[3];
         float dif;
@@ -156,6 +165,7 @@ void mapUnhelthyGrass(Mat field, Mat field_mask, int square_dimensions, int squa
         }
 }
 
+/* Nucleo principal que comanda o processamento de imagens */
 vector<map_block> image_processing(Mat field, int &max_col, int &max_row){
         /* squarees that are going to be used */
         Mat hsv_field; /* hsv_field vai receber a imagem passada por parametro após o seu color space ser convertido */
@@ -167,7 +177,6 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_row){
         Mat mask_field;
 
         vector<map_block> mapBlock;
-        vector<block> error;
 
         range field_range;
         range rgb_limits;

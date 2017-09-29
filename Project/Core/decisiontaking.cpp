@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <regex>
 
+/* Calcula o coeficiente de chuva baseado na previsão do tempo de três dias */
 float calcula_coeficiente(int weather[], float rain[]){
         int i = 0;
         float coefficient = 0;
@@ -16,6 +17,8 @@ float calcula_coeficiente(int weather[], float rain[]){
         return coefficient/39;
 }
 
+/* Essa funcao e responsavel por captar a previsao do tempo e separar os dados
+   em dois vetores */
 float parse_weather(){
         string stream;
         string s;
@@ -25,21 +28,20 @@ float parse_weather(){
         int weather_coefficient[12];
         float rain_percentage[12];
         float coefficient;
-        system("curl wttr.in/'London' > weather.txt");
+        system("curl wttr.in/'Fortaleza' > weather.txt");
 
         ifstream weather("weather.txt");
         rain_percentage[0] = 0.0;
-        /* This loop will parse the file where the weather report is saved and for every
-           condition it will assign a value. These values are:
+        /* Esse loop vai parsear o arquivo de previsao do tempo e para cada previsao
+           ele vai atribuir um valor numerico.
            Sunny = 3
            Clear = 2
            Cloudy = 1
            Overcast = 1
            Rain = 0
            Snow = 0
-           These values are coefficients that will be used in the decision whether the
-           selected tile will be irrigated or not. Besides the coefficients, the rain prediction
-           will be used as well to calculate a final coefficient for the given day. */
+           Esses valores sao coeficientes que vao ser usados para calcular um coeficiente
+           unico que vai ser usado na decisao final */
         while ( i < 12 )
         {
                 weather >> stream;
@@ -103,7 +105,7 @@ float parse_weather(){
 
         return coefficient = calcula_coeficiente(weather_coefficient, rain_percentage);
 }
-
+/* Funcao responsavel por obter o valor da variavel que representa o vento */
 int get_vento(){
         srand (time(NULL));
         int vento;
@@ -113,6 +115,7 @@ int get_vento(){
         return vento;
 }
 
+/* Funcao responsavel por captar o valor que o sensor de umidade retorna */
 int get_umidade(){
         srand (time(NULL));
         int umidade;
@@ -121,6 +124,7 @@ int get_umidade(){
         return umidade;
 }
 
+/* Funcao responsavel por captar o valor que o sensor de insolacao retorna */
 int get_insolacao(){
         srand (time(NULL));
         int insolacao;
@@ -129,6 +133,8 @@ int get_insolacao(){
         return insolacao;
 }
 
+/* Funcao que usa a diferença de cores entre o bloco e o minimo aceitavel para
+   ela ser saudavel e retorna um valor que e usado na tomada de decisao */
 int get_cor(bool regado, float dif_cor){
 
         if(regado) {
@@ -138,7 +144,8 @@ int get_cor(bool regado, float dif_cor){
         return 0;
 }
 
-
+/* Funcao que gera o valor dos parametros obtidos para tomar a decisao de regar
+   ou nao o bloco */
 float formula(parameters p ){
         float result;
 
@@ -149,6 +156,8 @@ float formula(parameters p ){
         return result;
 }
 
+/* Processo de tomada de decisao, e uma maquina de estados que considera o valor
+   retornado pela formula para ver o quanto sera utilizado de agua */
 int state_machine(parameters param_dia){
         enum estado estado_atual = INICIAL;
         float decisao;
@@ -217,10 +226,13 @@ int state_machine(parameters param_dia){
         return qtd_agua;
 }
 
+/* Placeholder para funcao de verdade que vai ser responsavel por ativar o sistema
+   de irrigacao */
 void rega(int quantidade_agua){
         cout << "A area selecionada foi regada em " << quantidade_agua << "% " << endl;
 }
 
+/* Salva o resultado anterior num arquivo */
 void save_resAnterior(vector<block_result> resultados, ofstream &output){
         vector<block_result>::iterator itr;
 
@@ -232,6 +244,7 @@ void save_resAnterior(vector<block_result> resultados, ofstream &output){
         output.close();
 }
 
+/* Resgata o resultado anterior do arquivo */
 int get_resAnterior(int x, int y, ifstream &input){
         int res_x, res_y, qtd_agua;
         input.open("resAnterior");

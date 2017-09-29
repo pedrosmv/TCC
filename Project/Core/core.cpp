@@ -67,11 +67,11 @@ int main(int argc, char *argv[]) {
                 circle(final_field, Point((*it).x, (*it).y), 10, Scalar(scalar, 0, 0), -1, 8);
 
                 resultados.push_back(block_result());
-                resultados[i].x = (*it).block_numx;
-                resultados[i].y = (*it).block_numy;
+                resultados[i].x = (*it).x/100;
+                resultados[i].y = (*it).y/100;
                 resultados[i].qtd_agua = qtd_agua;
-                cout << (*it).dif_cor << endl;
-                jatos.push_back(get_jato(sprinklers, (*it), max_row, max_col));
+                // cout << (*it).dif_cor << endl;
+                jatos.push_back(get_jato(sprinklers, resultados[i], max_row, max_col));
                 // cout << endl;
                 // cout << "Sprinkler: "  << endl;
                 // if(jatos[i].orientacao == ESQUERDA)
