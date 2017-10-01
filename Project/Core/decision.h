@@ -38,6 +38,7 @@ int state_machine(parameters param_dia);
 int get_resAnterior(int x, int y, ifstream &input);
 void rega(int quantidade_agua);
 void save_resAnterior(vector<block_result> resultados, ofstream &output);
+float find_wind();
 
 // void get_parameters(parameters* p, bool regado, float coeficiente);
 

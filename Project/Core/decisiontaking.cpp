@@ -17,6 +17,33 @@ float calcula_coeficiente(int weather[], float rain[]){
         return coefficient/39;
 }
 
+/* Funcao responsavel por obter da internet a velocidade do vento no dia atual */
+float find_wind(){
+        string stream;
+        float vento;
+        string result;
+        system("ansiweather -l Campinas > t.txt");
+        ifstream file("t.txt");
+        stream.assign( (istreambuf_iterator<char>(file)),
+                       (istreambuf_iterator<char>()));
+
+        const string s = stream;
+        std::string::const_iterator start, end;
+        start = s.begin();
+        end   = s.end();
+        regex expr{"[0-9]{1,2}.[0-9]{1,2} m/s"};
+        smatch match;
+
+        while(regex_search(start, end,match, expr)) {
+                result = match[0];
+                start = match[0].second;
+        }
+        vento = stof(result);
+        file.close();
+        return vento = vento * 3.6;
+}
+
+
 /* Essa funcao e responsavel por captar a previsao do tempo e separar os dados
    em dois vetores */
 float parse_weather(){
@@ -107,12 +134,32 @@ float parse_weather(){
 }
 /* Funcao responsavel por obter o valor da variavel que representa o vento */
 int get_vento(){
-        srand (time(NULL));
-        int vento;
 
-        vento = rand() % 5 + 1;
+        float vento;
+        int result;
 
-        return vento;
+        vento = find_wind();
+
+        if (vento <= 5) {
+                result = 1;
+        }
+        else if (vento > 5 && vento <= 10) {
+                result = 2;
+        }
+        else if (vento > 10 && vento <= 15) {
+                result = 3;
+        }
+        else if (vento > 15 && vento <= 20) {
+                result = 4;
+        }
+        else if (vento > 20 && vento <= 25) {
+                result = 5;
+        }
+        else{
+                result = 0;
+        }
+
+        return result;
 }
 
 /* Funcao responsavel por captar o valor que o sensor de umidade retorna */
