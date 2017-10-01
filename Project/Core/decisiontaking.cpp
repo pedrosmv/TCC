@@ -55,7 +55,7 @@ float parse_weather(){
         int weather_coefficient[12];
         float rain_percentage[12];
         float coefficient;
-        system("curl wttr.in/'Fortaleza' > weather.txt");
+        system("curl wttr.in/'Campinas' > weather.txt");
 
         ifstream weather("weather.txt");
         rain_percentage[0] = 0.0;
