@@ -39,3 +39,5 @@ http://www.instructables.com/id/Single-Servo-Robotic-Gripper/
 http://agritech.tnau.ac.in/agriculture/agri_agrometeorology_wind.html
 
 http://www.montana.edu/cpa/news/wwwpb-archives/ag/baudr258.html
+
+http://www.esalq.usp.br/departamentos/leb/disciplinas/Frizzone/LEB_1571/TEXTO_COMPLEMENTAR_2_-_NECESSIDADE_DE_AGUA_PARA_IRRIGACAO.pdf - pg 32
