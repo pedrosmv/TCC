@@ -5,5 +5,8 @@ Compile c++ boost
 g++ $(pkg-config --cflags opencv) getweather.cpp $(pkg-config --libs opencv) -o core -std=c++11 -lboost_regex
 
 compile program c++
+g++ $(pkg-config --cflags opencv) imageprocessing.cpp core.cpp decisiontaking.cpp sprinkler.cpp $(pkg-config --libs opencv) -o core -std=c++11 -Wall
+
+
 
 ||
