@@ -30,13 +30,15 @@ float find_wind(){
         std::string::const_iterator start, end;
         start = s.begin();
         end   = s.end();
-        regex expr{"[0-9]{1,2}.[0-9]{1,2} m/s"};
+        regex expr{"[0-9]?[0-9]?(\.[0-9][0-9]?)? m/s"};
         smatch match;
 
         while(regex_search(start, end,match, expr)) {
                 result = match[0];
                 start = match[0].second;
         }
+        cout << result << endl;
+
         vento = stof(result);
         cout << vento << endl;
         file.close();
