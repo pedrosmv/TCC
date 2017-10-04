@@ -61,7 +61,10 @@ int main(int argc, char *argv[]) {
                 p.insolacao = insolacao;
                 p.resultadoAnterior = get_resAnterior((*it).block_numx, (*it).block_numy, input);
                 p.corGrama = get_cor((*it).regado, (*it).dif_cor);
-                qtd_agua = state_machine(p);
+                if(p.coeficienteChuva*100 > 10)
+                        qtd_agua = state_machine(p);
+                else
+                        qtd_agua = 0;
 
                 scalar = 255*qtd_agua/100;
                 circle(final_field, Point((*it).x, (*it).y), 10, Scalar(scalar, 0, 0), -1, 8);

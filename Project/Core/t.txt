@@ -1,1 +1,1 @@
-[44m[36;1m Current weather in Campinas [35m=>[33;1m 22 °C [33;1m☀ [34m-[36;1m Wind [35m=>[33;1m 5.7 m/s ESE [34m-[36;1m Humidity [35m=>[33;1m 40 % [34m-[36;1m Pressure [35m=>[33;1m 1022 hPa [0m
+[44m[36;1m Current weather in Campinas [35m=>[33;1m 23 °C [33;1m☀ [34m-[36;1m Wind [35m=>[33;1m 5.1 m/s ESE [34m-[36;1m Humidity [35m=>[33;1m 46 % [34m-[36;1m Pressure [35m=>[33;1m 1021 hPa [0m

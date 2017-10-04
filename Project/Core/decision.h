@@ -24,7 +24,7 @@ struct block_result {
         int qtd_agua;
 };
 
-enum estado {INICIAL, NAOREGA, CALC, REGA100, REGA70, REGA40, FIM};
+enum estado {INICIAL, NAOREGA, CALC, REGA, FIM};
 
 float calcula_coeficiente(int tempo[], float chuva[]);
 float parse_tempo();

@@ -216,49 +216,22 @@ int state_machine(parameters param_dia){
 
                 switch(estado_atual) {
                 case INICIAL:
-
-                        decisao = 100 * param_dia.coeficienteChuva;
-
-                        if (decisao > 10) {
-                                estado_atual = CALC;
-                        }
-                        else{
-                                estado_atual = NAOREGA;
-                        }
-                        break;
-
-                case CALC:
                         decisao = formula(param_dia);
+                        estado_atual = CALC;
+                case CALC:
+
                         // salva resultado em arquivo
-                        if(decisao > 70) {
-                                estado_atual = REGA100;
-                        }
-                        else if (decisao > 50 && decisao < 70) {
-                                estado_atual = REGA70;
-                        }
-                        else if (decisao > 10 && decisao < 50) {
-                                estado_atual = REGA40;
+                        if(decisao > 10) {
+                                estado_atual = REGA;
                         }
                         else {
                                 estado_atual = NAOREGA;
                         }
                         break;
 
-                case REGA100:
-                        rega(100);
-                        qtd_agua = 100;
-                        estado_atual = FIM;
-                        break;
-
-                case REGA70:
-                        rega(70);
-                        qtd_agua = 70;
-                        estado_atual = FIM;
-                        break;
-
-                case REGA40:
-                        rega(40);
-                        qtd_agua = 40;
+                case REGA:
+                        rega(decisao);
+                        qtd_agua = decisao;
                         estado_atual = FIM;
                         break;
 
