@@ -15,7 +15,7 @@ using namespace cv;
 int main(int argc, char *argv[]) {
         int i= 0;
         float coeficiente;
-        int max_row, max_col;
+        int max_linha, max_col;
         int raio;
         float scalar;
         int qtd_agua;
@@ -35,18 +35,18 @@ int main(int argc, char *argv[]) {
 
 
         /* --- Variaveis de decisao */
-        coeficiente = parse_weather();
+        coeficiente = parse_tempo();
         vento = get_vento();
         umidade = get_umidade();
         insolacao = get_insolacao();
 
         /* Processamento de imagem */
         // field = stich(argc, argv);
-        field = imread("field.jpg");
-        grass_blocks = image_processing(field, max_col, max_row);
+        field = imread("teste.jpg");
+        grass_blocks = image_processing(field, max_col, max_linha);
         final_field = imread("final.jpg");
 
-        sprinklers = set_sprinklers(max_col, max_row, raio);
+        sprinklers = set_sprinklers(max_col, max_linha, raio);
         // for (i=0; i<4; i++) {
         //         cout << sprinklers[i].x  << endl;
         //         cout << sprinklers[i].y << endl;
@@ -71,7 +71,7 @@ int main(int argc, char *argv[]) {
                 resultados[i].y = (*it).y/100;
                 resultados[i].qtd_agua = qtd_agua;
                 // cout << (*it).dif_cor << endl;
-                jatos.push_back(get_jato(sprinklers, resultados[i], max_row, max_col));
+                jatos.push_back(get_jato(sprinklers, resultados[i], max_linha, max_col));
                 // cout << endl;
                 // cout << "Sprinkler: "  << endl;
                 // if(jatos[i].orientacao == ESQUERDA)

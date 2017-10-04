@@ -44,7 +44,7 @@ vector<sprinkler> read_sprinklers(){
 }
 
 /* Funcao responsavel por atribuir a posicao dos sprinklers */
-vector<sprinkler> set_sprinklers(int max_col, int max_row, int raio){
+vector<sprinkler> set_sprinklers(int max_col, int max_linha, int raio){
         vector<sprinkler> sprinklers;
         int valx = raio;
         int valy = 0;
@@ -53,13 +53,13 @@ vector<sprinkler> set_sprinklers(int max_col, int max_row, int raio){
         int n_sprinklers_y;
 
         n_sprinklers_x = floor(2*((max_col + 1)/(raio*2)));
-        n_sprinklers_y = floor(2*((max_row + 1)/(raio*2)));
+        n_sprinklers_y = floor(2*((max_linha + 1)/(raio*2)));
 
         for(int i=0; i<n_sprinklers_x; i++) {
                 sprinklers.push_back(sprinkler());
                 if(valx > max_col) {
                         valx = raio;
-                        valy = max_row;
+                        valy = max_linha;
                 }
 
                 sprinklers[i].x = valx*5;
@@ -71,7 +71,7 @@ vector<sprinkler> set_sprinklers(int max_col, int max_row, int raio){
         valx = raio;
         for(int i=0; i<n_sprinklers_y; i++) {
                 sprinklers.push_back(sprinkler());
-                if(valx > max_row) {
+                if(valx > max_linha) {
                         valx = raio;
                         valy = max_col;
                 }
@@ -125,7 +125,7 @@ int angulo (float xa, float xb, float ya, float yb){
 }
 
 /* Funcao para pegar as informações do jato */
-jato get_jato(vector<sprinkler> sprinklers, block_result grass_block, int max_row, int max_col){
+jato get_jato(vector<sprinkler> sprinklers, block_result grass_block, int max_linha, int max_col){
 
         jato jato;
         if((grass_block.x)/5 < 2 ) {

@@ -7,21 +7,21 @@
 
 using namespace std;
 
-float calculate_coefficient(int weather[], float rain[]){
+float calculate_coeficiente(int tempo[], float rain[]){
         int i = 0;
-        float coefficient = 0;
+        float coeficiente = 0;
         for (i=0; i<12; i++) {
-                coefficient = coefficient + (weather[i] * (1 -(rain[i]/100)));
+                coeficiente = coeficiente + (tempo[i] * (1 -(rain[i]/100)));
         }
 
-        return coefficient/39;
+        return coeficiente/39;
 }
 
 float find_wind(){
         string stream;
         float vento;
         string result;
-        system("ansiweather -l Campinas > t.txt");
+        system("ansitempo -l Campinas > t.txt");
         ifstream file("t.txt");
         stream.assign( (istreambuf_iterator<char>(file)),
                        (istreambuf_iterator<char>()));
@@ -57,18 +57,18 @@ int main(){
         int nsunny = 0;
         int nsnow = 0;
         int novercast = 0;
-        int weather_coefficient[12];
+        int tempo_coeficiente[12];
         float rain_percentage[12];
-        float coefficient;
-        system("curl wttr.in/'London' > weather.txt");
+        float coeficiente;
+        system("curl wttr.in/'London' > tempo.txt");
 
 
 
         find_wind();
 
-        ifstream weather("weather.txt");
+        ifstream tempo("tempo.txt");
         rain_percentage[0] = 0.0;
-        /* This loop will parse the file where the weather report is saved and for every
+        /* This loop will parse the file where the tempo report is saved and for every
            condition it will assign a value. These values are:
            Sunny = 3
            Clear = 2
@@ -76,66 +76,66 @@ int main(){
            Overcast = 1
            Rain = 0
            Snow = 0
-           These values are coefficients that will be used in the decision whether the
-           selected tile will be irrigated or not. Besides the coefficients, the rain prediction
-           will be used as well to calculate a final coefficient for the given day. */
+           These values are coeficientes that will be used in the decision whether the
+           selected tile will be irrigated or not. Besides the coeficientes, the rain prediction
+           will be used as well to calculate a final coeficiente for the given day. */
         while ( i < 12 )
         {
-                weather >> stream;
+                tempo >> stream;
                 size_t sunny = stream.find("Sunny", 0);
                 if(sunny != string::npos)
                 {
                         nsunny++;
-                        weather_coefficient[j] = 3;
+                        tempo_coeficiente[j] = 3;
                         j++;
                 }
                 size_t clear = stream.find("Clear", 0);
                 if(clear != string::npos)
                 {
                         nclear++;
-                        weather_coefficient[j] = 2;
+                        tempo_coeficiente[j] = 2;
                         j++;
                 }
                 size_t rain = stream.find("Rain", 0);
                 if(rain != string::npos)
                 {
                         nrain++;
-                        weather_coefficient[j] = 0;
+                        tempo_coeficiente[j] = 0;
                         j++;
                 }
                 rain = stream.find("rain", 0);
                 if(rain != string::npos)
                 {
                         nrain++;
-                        weather_coefficient[j] = 0;
+                        tempo_coeficiente[j] = 0;
                         j++;
                 }
                 size_t cloudy = stream.find("Cloudy", 0);
                 if(cloudy != string::npos)
                 {
                         ncloudy++;
-                        weather_coefficient[j] = 1;
+                        tempo_coeficiente[j] = 1;
                         j++;
                 }
                 cloudy = stream.find("cloudy", 0);
                 if(cloudy != string::npos)
                 {
                         ncloudy++;
-                        weather_coefficient[j] = 1;
+                        tempo_coeficiente[j] = 1;
                         j++;
                 }
                 size_t snow = stream.find("Snow", 0);
                 if(snow != string::npos)
                 {
                         nsnow++;
-                        weather_coefficient[j] = 0;
+                        tempo_coeficiente[j] = 0;
                         j++;
                 }
                 size_t overcast = stream.find("Overcast", 0);
                 if(overcast != string::npos)
                 {
                         novercast++;
-                        weather_coefficient[j] = 1;
+                        tempo_coeficiente[j] = 1;
                         j++;
                 }
                 size_t found = stream.find('%');
@@ -147,8 +147,8 @@ int main(){
                         i++;
                 }
         }
-        coefficient = calculate_coefficient(weather_coefficient, rain_percentage);
+        coeficiente = calculate_coeficiente(tempo_coeficiente, rain_percentage);
 
-        weather.close();
+        tempo.close();
         return 0;
 }

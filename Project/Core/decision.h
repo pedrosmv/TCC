@@ -26,8 +26,8 @@ struct block_result {
 
 enum estado {INICIAL, NAOREGA, CALC, REGA100, REGA70, REGA40, FIM};
 
-float calcula_coeficiente(int weather[], float rain[]);
-float parse_weather();
+float calcula_coeficiente(int tempo[], float chuva[]);
+float parse_tempo();
 float resultadoAnterior();
 float formula(parameters p );
 int get_vento();

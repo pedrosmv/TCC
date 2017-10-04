@@ -7,21 +7,21 @@
 #include <regex>
 
 /* Calcula o coeficiente de chuva baseado na previsão do tempo de três dias */
-float calcula_coeficiente(int weather[], float rain[]){
+float calcula_coeficiente(int tempo[], float chuva[]){
         int i = 0;
-        float coefficient = 0;
+        float coeficiente = 0;
         for (i=0; i<12; i++) {
-                coefficient = coefficient + (weather[i] * (1 -(rain[i]/100)));
+                coeficiente = coeficiente + (tempo[i] * (1 -(chuva[i]/100)));
         }
 
-        return coefficient/39;
+        return coeficiente/39;
 }
 
 /* Funcao responsavel por obter da internet a velocidade do vento no dia atual */
 float find_wind(){
         string stream;
         float vento;
-        string result;
+        string resultado;
         system("ansiweather -l Campinas > t.txt");
         ifstream file("t.txt");
         stream.assign( (istreambuf_iterator<char>(file)),
@@ -31,14 +31,15 @@ float find_wind(){
         std::string::const_iterator start, end;
         start = s.begin();
         end   = s.end();
-        regex expr{"[0-9]{1,2}.[0-9]{1,2} m/s"};
+        regex expr{"[0-9]?[0-9]?(\.[0-9][0-9]?)? m/s"};
         smatch match;
 
         while(regex_search(start, end,match, expr)) {
-                result = match[0];
+                resultado = match[0];
                 start = match[0].second;
         }
-        vento = stof(result);
+        cout << resultado << endl;
+        vento = stof(resultado);
         file.close();
         return vento = vento * 3.6;
 }
@@ -46,19 +47,19 @@ float find_wind(){
 
 /* Essa funcao e responsavel por captar a previsao do tempo e separar os dados
    em dois vetores */
-float parse_weather(){
+float parse_tempo(){
         string stream;
         string s;
         const string parameter = s;
         int i=0;
         int j=0;
-        int weather_coefficient[12];
-        float rain_percentage[12];
-        float coefficient;
-        system("curl wttr.in/'Campinas' > weather.txt");
+        int tempo_coeficiente[12];
+        float chuva_porcentagem[12];
+        float coeficiente;
+        system("curl wttr.in/'Campinas' > tempo.txt");
 
-        ifstream weather("weather.txt");
-        rain_percentage[0] = 0.0;
+        ifstream tempo("tempo.txt");
+        chuva_porcentagem[0] = 0.0;
         /* Esse loop vai parsear o arquivo de previsao do tempo e para cada previsao
            ele vai atribuir um valor numerico.
            Sunny = 3
@@ -71,53 +72,53 @@ float parse_weather(){
            unico que vai ser usado na decisao final */
         while ( i < 12 )
         {
-                weather >> stream;
+                tempo >> stream;
                 size_t sunny = stream.find("Sunny", 0);
                 if(sunny != string::npos)
                 {
-                        weather_coefficient[j] = 3;
+                        tempo_coeficiente[j] = 3;
                         j++;
                 }
                 size_t clear = stream.find("Clear", 0);
                 if(clear != string::npos)
                 {
-                        weather_coefficient[j] = 2;
+                        tempo_coeficiente[j] = 2;
                         j++;
                 }
                 size_t rain = stream.find("Rain", 0);
                 if(rain != string::npos)
                 {
-                        weather_coefficient[j] = 0;
+                        tempo_coeficiente[j] = 0;
                         j++;
                 }
                 rain = stream.find("rain", 0);
                 if(rain != string::npos)
                 {
-                        weather_coefficient[j] = 0;
+                        tempo_coeficiente[j] = 0;
                         j++;
                 }
                 size_t cloudy = stream.find("Cloudy", 0);
                 if(cloudy != string::npos)
                 {
-                        weather_coefficient[j] = 1;
+                        tempo_coeficiente[j] = 1;
                         j++;
                 }
                 cloudy = stream.find("cloudy", 0);
                 if(cloudy != string::npos)
                 {
-                        weather_coefficient[j] = 1;
+                        tempo_coeficiente[j] = 1;
                         j++;
                 }
                 size_t snow = stream.find("Snow", 0);
                 if(snow != string::npos)
                 {
-                        weather_coefficient[j] = 0;
+                        tempo_coeficiente[j] = 0;
                         j++;
                 }
                 size_t overcast = stream.find("Overcast", 0);
                 if(overcast != string::npos)
                 {
-                        weather_coefficient[j] = 1;
+                        tempo_coeficiente[j] = 1;
                         j++;
                 }
                 size_t found = stream.find('%');
@@ -125,41 +126,42 @@ float parse_weather(){
                 {
                         float aux;
                         aux = stof(stream);
-                        rain_percentage[i+1] = aux;
+                        chuva_porcentagem[i+1] = aux;
                         i++;
                 }
         }
 
-        return coefficient = calcula_coeficiente(weather_coefficient, rain_percentage);
+        return coeficiente = calcula_coeficiente(tempo_coeficiente, chuva_porcentagem);
 }
 /* Funcao responsavel por obter o valor da variavel que representa o vento */
 int get_vento(){
 
         float vento;
-        int result;
+        int resultado;
 
         vento = find_wind();
 
+
         if (vento <= 5) {
-                result = 1;
+                resultado = 1;
         }
         else if (vento > 5 && vento <= 10) {
-                result = 2;
+                resultado = 2;
         }
         else if (vento > 10 && vento <= 15) {
-                result = 3;
+                resultado = 3;
         }
         else if (vento > 15 && vento <= 20) {
-                result = 4;
+                resultado = 4;
         }
         else if (vento > 20 && vento <= 25) {
-                result = 5;
+                resultado = 5;
         }
         else{
-                result = 0;
+                resultado = 0;
         }
 
-        return result;
+        return resultado;
 }
 
 /* Funcao responsavel por captar o valor que o sensor de umidade retorna */
@@ -194,13 +196,13 @@ int get_cor(bool regado, float dif_cor){
 /* Funcao que gera o valor dos parametros obtidos para tomar a decisao de regar
    ou nao o bloco */
 float formula(parameters p ){
-        float result;
+        float resultado;
 
-        result = p.coeficienteChuva*((p.corGrama + ((p.vento*p.insolacao)/p.umidade)) - p.resultadoAnterior);
-        if (result < 0) {
-                result = 0;
+        resultado = p.coeficienteChuva*((p.corGrama + ((p.vento*p.insolacao)/p.umidade)) - p.resultadoAnterior);
+        if (resultado < 0) {
+                resultado = 0;
         }
-        return result;
+        return resultado;
 }
 
 /* Processo de tomada de decisao, e uma maquina de estados que considera o valor
