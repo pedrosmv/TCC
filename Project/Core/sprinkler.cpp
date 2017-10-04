@@ -125,7 +125,7 @@ int angulo (float xa, float xb, float ya, float yb){
 }
 
 /* Funcao para pegar as informações do jato */
-jato get_jato(vector<sprinkler> sprinklers, block_result grass_block, int max_linha, int max_col){
+jato get_jato(vector<sprinkler> sprinklers, block_result grass_block){
 
         jato jato;
         if((grass_block.x)/5 < 2 ) {

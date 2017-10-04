@@ -24,7 +24,7 @@ struct jato {
         enum orientacao orientacao;
 };
 
-jato get_jato(vector<sprinkler> sprinklers, block_result grass_block, int max_linha, int max_col);
+jato get_jato(vector<sprinkler> sprinklers, block_result grass_block);
 vector<sprinkler> read_sprinklers();
 vector<sprinkler> set_sprinklers(int max_col, int max_linha, int raio);
 int angulo (float xa, float xb, float ya, float yb);

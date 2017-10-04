@@ -74,7 +74,7 @@ int main(int argc, char *argv[]) {
                 resultados[i].y = (*it).y/100;
                 resultados[i].qtd_agua = qtd_agua;
                 // cout << (*it).dif_cor << endl;
-                jatos.push_back(get_jato(sprinklers, resultados[i], max_linha, max_col));
+                jatos.push_back(get_jato(sprinklers, resultados[i]));
                 // cout << endl;
                 // cout << "Sprinkler: "  << endl;
                 // if(jatos[i].orientacao == ESQUERDA)
