@@ -128,7 +128,7 @@ float calc_dif_cor(int blue, int green, int red, range limites_rgb){
 }
 
 /* mapUnhelthyGrass vai mapear os quadrados que precisam ser regados e colocar a posição dos quadrados num vetor de structs */
-void mapUnhelthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, int quad_col, int block_size, vector<map_block> &mapBlock, range limites_rgb){
+void mapUnhelthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, int quad_col, vector<map_block> &mapBlock, range limites_rgb){
         int x, y, row, col, i,num_quad;
         int r, g, b;
         x = quad_dim/2;
@@ -188,25 +188,14 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_linha){
         /* ########################### */
 
         /* Numerical values */
-        int bound_min, bound_max;
         int i, j, aux;
         int quad_dim, quad_linha, quad_col;
         int black_pixel_maximum;
-        int block_size;
 
         quad_dim = 100;
-        block_size = quad_dim*5;
         black_pixel_maximum = quad_dim*quad_dim*0.6;
         quad_linha = field.rows/quad_dim;
         quad_col = field.cols/quad_dim;
-
-//         if(field.rows % quad_dim) {
-//                 quad_linha = (field.rows/quad_dim) + 1;
-//         }
-
-//         if(field.cols % quad_dim) {
-//                 quad_col = (field.cols/quad_dim) + 1;
-//         }
 
         /* Pre-processamento da imagem */
         blur(field, field, Size(2,2)); /* Blurs an image using the normalized box filter. */
@@ -215,28 +204,12 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_linha){
         element = getStructuringElement(MORPH_RECT, Size(9, 9), Point(4,4));
         morphologyEx(field_treshold, processed_field, MORPH_CLOSE, element);
 
-        bound_min = processed_field.rows;
-        bound_max = 0;
-
-        for(i = 0; i < processed_field.cols; i++) {
-                for(j = 0; j < processed_field.rows; j++) {
-                        if(processed_field.at<uchar>(j,i) == 0) {
-                                aux = j;
-                                break;
-                        }
-                }
-                if (aux < bound_min)
-                        bound_min = aux;
-                if (aux > bound_max)
-                        bound_max = aux;
-        }
-
         field.copyTo(final_field, field_treshold);
 
         /* Processamento da imagem para encontrar as areas que precisam ser regadas */
         squared_field = calculateAvgPxlColor(final_field, quad_dim, quad_linha, quad_col, black_pixel_maximum);
         mask_field = apply_mask(squared_field,limites_rgb);
-        mapUnhelthyGrass(squared_field, mask_field, quad_dim, quad_linha, quad_col, block_size, mapBlock, limites_rgb);
+        mapUnhelthyGrass(squared_field, mask_field, quad_dim, quad_linha, quad_col, mapBlock, limites_rgb);
 
         imwrite("final.jpg", squared_field);
         imwrite("mask.jpg", mask_field);
