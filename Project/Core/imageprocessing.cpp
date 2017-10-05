@@ -188,7 +188,6 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_linha){
         /* ########################### */
 
         /* Numerical values */
-        int i, j, aux;
         int quad_dim, quad_linha, quad_col;
         int black_pixel_maximum;
 
@@ -199,11 +198,14 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_linha){
 
         /* Pre-processamento da imagem */
         blur(field, field, Size(2,2)); /* Blurs an image using the normalized box filter. */
+        imwrite("blur.jpg", field);
         cvtColor(field, hsv_field, CV_BGR2HSV); /* Converts an image from one color space to another. BGR -> HSV */
+        imwrite("hsv_field.jpg", hsv_field);
         inRange(hsv_field, field_range.min, field_range.max, field_treshold);
+        imwrite("imagem segmentada.jpg", field_treshold);
         element = getStructuringElement(MORPH_RECT, Size(9, 9), Point(4,4));
         morphologyEx(field_treshold, processed_field, MORPH_CLOSE, element);
-
+        imwrite("process morfologico.jpg", field_treshold);
         field.copyTo(final_field, field_treshold);
 
         /* Processamento da imagem para encontrar as areas que precisam ser regadas */
