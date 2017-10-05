@@ -205,8 +205,8 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_linha){
         imwrite("imagem segmentada.jpg", field_treshold);
         element = getStructuringElement(MORPH_RECT, Size(9, 9), Point(4,4));
         morphologyEx(field_treshold, processed_field, MORPH_CLOSE, element);
-        imwrite("process morfologico.jpg", field_treshold);
-        field.copyTo(final_field, field_treshold);
+        imwrite("process morfologico.jpg", processed_field);
+        field.copyTo(final_field, processed_field);
 
         /* Processamento da imagem para encontrar as areas que precisam ser regadas */
         squared_field = calculateAvgPxlColor(final_field, quad_dim, quad_linha, quad_col, black_pixel_maximum);
