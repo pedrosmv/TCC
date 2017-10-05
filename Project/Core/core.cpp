@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
                 p.umidade = umidade;
                 p.vento = vento;
                 p.insolacao = insolacao;
-                p.resultadoAnterior = get_resAnterior((*it).block_numx, (*it).block_numy, input);
+                p.resultadoAnterior = get_resAnterior((*it).x/100, (*it).y/100, input);
                 p.corGrama = get_cor((*it).regado, (*it).dif_cor);
                 if(p.coeficienteChuva*100 > 10)
                         qtd_agua = state_machine(p);

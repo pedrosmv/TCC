@@ -149,8 +149,6 @@ void mapUnhelthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, i
                                                 b = field.at<Vec3b>(y, x)[0];
                                                 g = field.at<Vec3b>(y, x)[1];
                                                 r = field.at<Vec3b>(y, x)[2];
-                                                mapBlock[i].block_numx = (x/(block_size));
-                                                mapBlock[i].block_numy = (y/(block_size));
                                                 // circle(field, Point(x, y), 10, Scalar(255, 0, 0), -1, 8);
                                                 mapBlock[i].dif_cor = calc_dif_cor(b, g, r, limites_rgb);
                                                 i++;

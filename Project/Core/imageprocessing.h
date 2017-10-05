@@ -20,8 +20,6 @@ struct map_block {
         int y;
         bool regado = false;
         float dif_cor;
-        int block_numx;
-        int block_numy;
         float res_anterior;
 };
 
