@@ -127,8 +127,8 @@ float calc_dif_cor(int blue, int green, int red, range limites_rgb){
         return dif = sqrt(pow(vetor_dif[0], 2) + pow(vetor_dif[1], 2) + pow(vetor_dif[2], 2));
 }
 
-/* mapUnhelthyGrass vai mapear os quadrados que precisam ser regados e colocar a posição dos quadrados num vetor de structs */
-void mapUnhelthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, int quad_col, vector<map_block> &mapBlock, range limites_rgb){
+/* mapUnhealthyGrass vai mapear os quadrados que precisam ser regados e colocar a posição dos quadrados num vetor de structs */
+void mapUnhealthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, int quad_col, vector<map_block> &mapBlock, range limites_rgb){
         int x, y, row, col, i,num_quad;
         int r, g, b;
         x = quad_dim/2;
@@ -149,7 +149,6 @@ void mapUnhelthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, i
                                                 b = field.at<Vec3b>(y, x)[0];
                                                 g = field.at<Vec3b>(y, x)[1];
                                                 r = field.at<Vec3b>(y, x)[2];
-                                                // circle(field, Point(x, y), 10, Scalar(255, 0, 0), -1, 8);
                                                 mapBlock[i].dif_cor = calc_dif_cor(b, g, r, limites_rgb);
                                                 i++;
                                         }
@@ -211,7 +210,7 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_linha){
         /* Processamento da imagem para encontrar as areas que precisam ser regadas */
         squared_field = calculateAvgPxlColor(final_field, quad_dim, quad_linha, quad_col, black_pixel_maximum);
         mask_field = apply_mask(squared_field,limites_rgb);
-        mapUnhelthyGrass(squared_field, mask_field, quad_dim, quad_linha, quad_col, mapBlock, limites_rgb);
+        mapUnhealthyGrass(squared_field, mask_field, quad_dim, quad_linha, quad_col, mapBlock, limites_rgb);
 
         imwrite("final.jpg", squared_field);
         imwrite("mask.jpg", mask_field);

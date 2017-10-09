@@ -22,8 +22,8 @@ float find_wind(){
         string stream;
         float vento;
         string resultado;
-        system("ansiweather -l Campinas > t.txt");
-        ifstream file("t.txt");
+        system("ansiweather -l Campinas > vento.txt");
+        ifstream file("vento.txt");
         stream.assign( (istreambuf_iterator<char>(file)),
                        (istreambuf_iterator<char>()));
 
@@ -187,7 +187,7 @@ int get_insolacao(){
 int get_cor(bool regado, float dif_cor){
 
         if(regado) {
-                return 80*((dif_cor/142)); /* 155 é a diferença maxima entre a grama boa e grama ruim */
+                return 80*((dif_cor/142)); /* 142 é a diferença maxima entre a grama boa e grama ruim */
         }
 
         return 0;
@@ -219,8 +219,6 @@ int state_machine(parameters param_dia){
                         decisao = formula(param_dia);
                         estado_atual = CALC;
                 case CALC:
-
-                        // salva resultado em arquivo
                         if(decisao > 10) {
                                 estado_atual = REGA;
                         }

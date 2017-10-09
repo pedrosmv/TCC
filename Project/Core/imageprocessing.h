@@ -26,7 +26,7 @@ vector<map_block> image_processing(Mat field, int &max_col, int &max_linha);
 Mat stich(int argc, char** argv);
 Mat calculateAvgPxlColor(Mat final_field, int quad_dim, int quad_linha, int quad_col, int black_pixel_maximum);
 Mat apply_mask(Mat squared_field, range limites_rgb);
-void mapUnhelthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, int quad_col, vector<map_block> &mapBlock, range limites_rgb);
+void mapUnhealthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, int quad_col, vector<map_block> &mapBlock, range limites_rgb);
 float calc_dif_cor(int blue, int green, int red, range limites_rgb);
 
 #endif

@@ -96,8 +96,8 @@ Mat apply_mask(Mat squared_field, range limites_rgb){
   return final_mask;
 }
 
-/* mapUnhelthyGrass vai mapear os quadrados que precisam ser regados e colocar a posição dos quadrados num vetor de structs */
-void mapUnhelthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, int quad_col, int block_size, vector<map_block> &mapBlock){
+/* mapUnhealthyGrass vai mapear os quadrados que precisam ser regados e colocar a posição dos quadrados num vetor de structs */
+void mapUnhealthyGrass(Mat field, Mat field_mask, int quad_dim, int quad_linha, int quad_col, int block_size, vector<map_block> &mapBlock){
   int x, y, row, col, i,num_quad;
   x = quad_dim/2;
   y = quad_dim/2;
@@ -204,7 +204,7 @@ int main(int argc, char** argv){
   /* Processamento da imagem para encontrar as areas que precisam ser regadas */
   squared_field = calculateAvgPxlColor(final_field, quad_dim, quad_linha, quad_col, black_pixel_maximum);
   mask_field = apply_mask(squared_field,limites_rgb);
-  mapUnhelthyGrass(squared_field, mask_field, quad_dim, quad_linha, quad_col, block_size, mapBlock);
+  mapUnhealthyGrass(squared_field, mask_field, quad_dim, quad_linha, quad_col, block_size, mapBlock);
 
   imwrite("final.jpg", squared_field);
   imwrite("mask.jpg", mask_field);
