@@ -23,16 +23,16 @@ vector<sprinkler> read_sprinklers(){
                 sprinklers.push_back(sprinkler());
                 istringstream resultado(line);
                 resultado >> sprinklers[i].x >> sprinklers[i].y;
-                if(sprinklers[i].x < 1 ) {
+                if(sprinklers[i].x < 5 ) {
                         sprinklers[i].orientacao = ESQUERDA;
                 }
-                else if((sprinklers[i].x > 1 && sprinklers[i].x < 4) && sprinklers[i].y < 1.5) {
+                else if((sprinklers[i].x >= 5 && sprinklers[i].x < 20) && sprinklers[i].y < 10) {
                         sprinklers[i].orientacao = CIMA;
                 }
-                else if(sprinklers[i].x > 3) {
+                else if(sprinklers[i].x > 15) {
                         sprinklers[i].orientacao = DIREITA;
                 }
-                else if((sprinklers[i].x > 1 && sprinklers[i].x < 4) && sprinklers[i].y > 1.5) {
+                else if((sprinklers[i].x >= 5 && sprinklers[i].x < 20) && sprinklers[i].y >= 10) {
                         sprinklers[i].orientacao = BAIXO;
                 }
                 i++;
@@ -93,13 +93,15 @@ vector<sprinkler> set_sprinklers(int max_col, int max_linha, int raio){
 float distancia (float xa, float xb, float ya, float yb){
         float distancia = 0;
         float equacao;
-
-        equacao = ((xb*xb) - (xa*xa)) + ((yb*yb) - (ya*ya));
+        float x, y;
+        x = xb-xa;
+        y = yb-ya;
+        equacao = (pow(x,2) + pow(y,2));
         equacao = fabs(equacao);
         if(equacao <1) {
                 equacao = 0;
         }
-        return distancia = sqrt(equacao)/5;
+        return distancia = sqrt(equacao);
 }
 
 /* Calcula o angulo entre dois pontos (bloco a ser regado e sprinkler) */
@@ -128,22 +130,22 @@ int angulo (float xa, float xb, float ya, float yb){
 jato get_jato(vector<sprinkler> sprinklers, block_result grass_block){
 
         jato jato;
-        if((grass_block.x)/5 < 2 ) {
+        if(grass_block.x < 10 ) {
                 jato.distancia = distancia(sprinklers[2].x, grass_block.x, sprinklers[2].y, grass_block.y);
                 jato.angle = angulo(sprinklers[2].x, grass_block.x, sprinklers[2].y, grass_block.y);
                 jato.orientacao = sprinklers[2].orientacao;
         }
-        else if(((grass_block.x)/5 >= 2 && (grass_block.x)/5 < 5) && (grass_block.y)/5 < 2) {
+        else if((grass_block.x >= 5 && grass_block.x < 20) && grass_block.y < 10) {
                 jato.distancia = distancia(sprinklers[0].x, grass_block.x, sprinklers[0].y, grass_block.y);
                 jato.angle = angulo(sprinklers[0].x, grass_block.x, sprinklers[0].y, grass_block.y);
                 jato.orientacao = sprinklers[0].orientacao;
         }
-        else if((grass_block.x)/5  == 5) {
+        else if(grass_block.x  > 15) {
                 jato.distancia = distancia(sprinklers[3].x, grass_block.x, sprinklers[2].y, grass_block.y);
                 jato.angle = angulo(sprinklers[3].x, (grass_block.x)/100, sprinklers[3].y, grass_block.y);
                 jato.orientacao = sprinklers[3].orientacao;
         }
-        else if(((grass_block.x)/5 > 1 && (grass_block.x)/5 <= 4) && (grass_block.y)/5 >=2 ) {
+        else if((grass_block.x >= 5 && grass_block.x <= 20) && grass_block.y >= 10 ) {
                 jato.distancia = distancia(sprinklers[1].x, grass_block.x, sprinklers[1].y, grass_block.y);
                 jato.angle = angulo(sprinklers[1].x, grass_block.x, sprinklers[1].y, grass_block.y);
                 jato.orientacao = sprinklers[1].orientacao;
