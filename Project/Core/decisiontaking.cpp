@@ -136,32 +136,32 @@ float parse_tempo(){
 /* Funcao responsavel por obter o valor da variavel que representa o vento */
 int get_vento(){
 
-        float vento;
-        int resultado;
+        int vento;
+        float resultado;
 
-        vento = find_wind();
+        resultado = find_wind();
 
 
-        if (vento <= 5) {
-                resultado = 1;
+        if (resultado <= 5) {
+                vento = 1;
         }
-        else if (vento > 5 && vento <= 10) {
-                resultado = 2;
+        else if (resultado > 5 && resultado <= 10) {
+                vento = 2;
         }
-        else if (vento > 10 && vento <= 15) {
-                resultado = 3;
+        else if (resultado > 10 && resultado <= 15) {
+                vento = 3;
         }
-        else if (vento > 15 && vento <= 20) {
-                resultado = 4;
+        else if (resultado > 15 && resultado <= 20) {
+                vento = 4;
         }
-        else if (vento > 20 && vento <= 25) {
-                resultado = 5;
+        else if (resultado > 20 && resultado <= 25) {
+                vento = 5;
         }
         else{
-                resultado = 0;
+                vento = 0;
         }
 
-        return resultado;
+        return vento;
 }
 
 /* Funcao responsavel por captar o valor que o sensor de umidade retorna */
@@ -228,13 +228,11 @@ int state_machine(parameters param_dia){
                         break;
 
                 case REGA:
-                        rega(decisao);
                         qtd_agua = decisao;
                         estado_atual = FIM;
                         break;
 
                 case NAOREGA:
-                        rega(0);
                         qtd_agua = 0;
                         estado_atual = FIM;
                         break;
