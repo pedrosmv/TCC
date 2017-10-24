@@ -14,3 +14,7 @@ g++ $(pkg-config --cflags opencv) imageprocessing.cpp core.cpp decisiontaking.cp
 
 Command to run opencv 3.2 on rasp
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+
+compile wiringPi
+
+gcc -o serial serial.c -lwiringPi -lpthread -std=c99 -lm -lcrypt -lrt

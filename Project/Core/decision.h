@@ -32,7 +32,7 @@ float resultadoAnterior();
 float formula(parameters p );
 int get_vento();
 int get_umidade();
-int get_insolacao();
+float get_insolacao();
 int get_cor(bool regado, float dif_cor);
 int state_machine(parameters param_dia);
 int get_resAnterior(int x, int y, ifstream &input);

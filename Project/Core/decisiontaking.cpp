@@ -166,20 +166,48 @@ int get_vento(){
 
 /* Funcao responsavel por captar o valor que o sensor de umidade retorna */
 int get_umidade(){
-        srand (time(NULL));
-        int umidade;
 
-        umidade = rand() % 4 + 1;
-        return umidade;
+        string stream;
+        ifstream file;
+        string aux;
+        int umidade_valor;
+
+        file.open("sensordata.txt");
+
+        while (getline (file, stream)) {
+
+                stringstream line(stream);
+                size_t found = stream.find("Umidade", 0);
+                if(found != string::npos)
+                {
+                        line >> aux >> umidade_valor;
+                }
+
+        }
+        return ((umidade_valor*4)/1023);
 }
 
 /* Funcao responsavel por captar o valor que o sensor de insolacao retorna */
-int get_insolacao(){
-        srand (time(NULL));
-        int insolacao;
+float get_insolacao(){
 
-        insolacao = rand() % 4 + 1;
-        return insolacao;
+        string stream;
+        ifstream file;
+        string aux;
+        float insolacao_valor;
+
+        file.open("sensordata.txt");
+
+        while (getline (file, stream)) {
+
+                stringstream line(stream);
+                size_t found = stream.find("Insolacao", 0);
+                if(found != string::npos)
+                {
+                        line >> aux >> insolacao_valor;
+                }
+
+        }
+        return insolacao_valor;
 }
 
 /* Funcao que usa a diferença de cores entre o bloco e o minimo aceitavel para

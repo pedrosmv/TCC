@@ -19,7 +19,8 @@ int main(int argc, char *argv[]) {
         int raio;
         float scalar;
         int qtd_agua;
-        int vento, umidade, insolacao;
+        int vento, umidade;
+        float insolacao;
         ofstream output;
         ifstream input;
 
@@ -30,11 +31,15 @@ int main(int argc, char *argv[]) {
         vector<jato> jatos;
         vector<sprinkler> sprinklers;
 
+        system("python ser.py");
+
         /* --- Variaveis de decisao */
         coeficiente = parse_tempo();
         vento = get_vento();
         umidade = get_umidade();
+        cout << umidade << endl;
         insolacao = get_insolacao();
+        cout << insolacao << endl;
 
         /* Processamento de imagem */
         field = stich(argc, argv);
@@ -44,38 +49,38 @@ int main(int argc, char *argv[]) {
         sprinklers = read_sprinklers();
 
         /* Tomada de decisão */
-        if (coeficiente*100 > 10){
-        for(it = grass_blocks.begin(); it != grass_blocks.end(); it++) {
-                parameters p;
-                p.coeficienteChuva = coeficiente;
-                p.umidade = umidade;
-                p.vento = vento;
-                p.insolacao = insolacao;
-                p.resultadoAnterior = get_resAnterior((*it).x/100, (*it).y/100, input);
-                p.corGrama = get_cor((*it).regado, (*it).dif_cor);
-                qtd_agua = state_machine(p);
+        if (coeficiente*100 > 10) {
+                for(it = grass_blocks.begin(); it != grass_blocks.end(); it++) {
+                        parameters p;
+                        p.coeficienteChuva = coeficiente;
+                        p.umidade = umidade;
+                        p.vento = vento;
+                        p.insolacao = insolacao;
+                        p.resultadoAnterior = get_resAnterior((*it).x/100, (*it).y/100, input);
+                        p.corGrama = get_cor((*it).regado, (*it).dif_cor);
+                        qtd_agua = state_machine(p);
 
-                scalar = 255*qtd_agua/100;
-                circle(final_field, Point((*it).x, (*it).y), 10, Scalar(scalar, 0, 0), -1, 8);
+                        scalar = 255*qtd_agua/100;
+                        circle(final_field, Point((*it).x, (*it).y), 10, Scalar(scalar, 0, 0), -1, 8);
 
-                resultados.push_back(block_result());
-                resultados[i].x = (*it).x/100;
-                resultados[i].y = (*it).y/100;
-                resultados[i].qtd_agua = qtd_agua;
-                jatos.push_back(get_jato(sprinklers, resultados[i]));
-                i++;
+                        resultados.push_back(block_result());
+                        resultados[i].x = (*it).x/100;
+                        resultados[i].y = (*it).y/100;
+                        resultados[i].qtd_agua = qtd_agua;
+                        jatos.push_back(get_jato(sprinklers, resultados[i]));
+                        i++;
+                }
         }
-      }
-      else {
-        i = 0;
-        for(it = grass_blocks.begin(); it != grass_blocks.end(); it++){
-          resultados.push_back(block_result());
-          resultados[i].x = (*it).x/100;
-          resultados[i].y = (*it).y/100;
-          resultados[i].qtd_agua = 0;
-          i++;
+        else {
+                i = 0;
+                for(it = grass_blocks.begin(); it != grass_blocks.end(); it++) {
+                        resultados.push_back(block_result());
+                        resultados[i].x = (*it).x/100;
+                        resultados[i].y = (*it).y/100;
+                        resultados[i].qtd_agua = 0;
+                        i++;
+                }
         }
-      }
 
         imwrite("x.jpg", final_field);
         remove("resAnterior");
