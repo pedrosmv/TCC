@@ -1,3 +1,6 @@
+#include <Servo.h>
+Servo myservo;  // create servo object to control a servo
+
 // YL-39 + YL-69 humidity sensor
 int pino_umidade = A0;
 int pino_insolacao = A1;
@@ -5,6 +8,7 @@ int pino_insolacao = A1;
 int umidade;
 int ins;
 void setup() {
+        myservo.attach(9);
         Serial.begin(9600);
 }
 
@@ -25,33 +29,30 @@ void loop() {
         float voltage = ins * (5.0 / 1023.0);;
         Serial.println(voltage);
 
-        if (Serial.available() > 0) { // is a character available?
-                rx_byte = Serial.read(); // get the character
+        if (Serial.available() > 0) {
+                rx_byte = Serial.read();
 
                 if ((rx_byte >= '0') && (rx_byte <= '9')) {
                         rx_str += rx_byte;
                 }
                 else if (rx_byte == '\n') {
-                        // end of string
-                        if (!numero) {
+                        if (numero) {
                                 Serial.println("Not a number");
                         }
                         else {
-                                // multiply the number by 2
-                                result = rx_str.toInt();
-                                // print the result
-                                Serial.print(result);
+                                resultado = rx_str.toInt();
+                                Serial.print(resultado);
 
                         }
-                        numero = true; // reset flag
-                        rx_str = ""; // clear the string for reuse
+                        numero = true;
+                        rx_str = "";
                 }
                 else {
-                        // non-number character received
-                        numero = false; // flag a non-number
+                        numero = false;
                 }
-        } // end: if (Serial.available() > 0)
+        }
 
+        myservo.write(resultado);
 
         delay(2000);
 }
