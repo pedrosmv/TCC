@@ -154,3 +154,15 @@ jato get_jato(vector<sprinkler> sprinklers, block_result grass_block){
         return jato;
 
 }
+
+void save_Angulos(vector<jato> jatos){
+        vector<jato>::iterator itr;
+        ofstream output;
+
+        output.open("angulos", ios::app);
+        for (itr = jatos.begin(); itr != jatos.end(); itr++) {
+                output << (*itr).angle << endl;
+        }
+        output << " ";
+        output.close();
+}

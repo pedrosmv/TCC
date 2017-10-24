@@ -29,5 +29,7 @@ vector<sprinkler> read_sprinklers();
 vector<sprinkler> set_sprinklers(int max_col, int max_linha, int raio);
 int angulo (float xa, float xb, float ya, float yb);
 float distancia (float xa, float xb, float ya, float yb);
+void save_Angulos(vector<jato> jatos);
+
 
 #endif

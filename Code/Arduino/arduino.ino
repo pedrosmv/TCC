@@ -54,5 +54,5 @@ void loop() {
 
         myservo.write(resultado);
 
-        delay(2000);
+        delay(5000);
 }

@@ -1,4 +1,5 @@
 #include "decision.h"
+#include "sprinkler.h"
 #include <iostream>
 #include <fstream>
 #include <stdio.h>

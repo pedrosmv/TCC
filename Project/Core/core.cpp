@@ -16,7 +16,6 @@ int main(int argc, char *argv[]) {
         int i= 0;
         float coeficiente;
         int max_linha, max_col;
-        int raio;
         float scalar;
         int qtd_agua;
         int vento, umidade;
@@ -31,7 +30,7 @@ int main(int argc, char *argv[]) {
         vector<jato> jatos;
         vector<sprinkler> sprinklers;
 
-        system("python ser.py");
+        system("python read.py");
 
         /* --- Variaveis de decisao */
         coeficiente = parse_tempo();
@@ -84,6 +83,8 @@ int main(int argc, char *argv[]) {
 
         imwrite("x.jpg", final_field);
         remove("resAnterior");
+        save_Angulos(jatos);
+        system("python send.py");
         save_resAnterior(resultados, output);
 
         return 0;
