@@ -12,6 +12,9 @@ float calcula_coeficiente(int tempo[], float chuva[]){
         int i = 0;
         float coeficiente = 0;
         for (i=0; i<12; i++) {
+                cout << coeficiente << endl;
+                cout << "tempo: " << tempo[i] << endl;
+                cout << "chuva: " << chuva[i] << endl;
                 coeficiente = coeficiente + (tempo[i] * (1 -(chuva[i]/100)));
         }
 
@@ -23,7 +26,7 @@ float find_wind(){
         string stream;
         float vento;
         string resultado;
-        system("ansiweather -l Campinas > vento.txt");
+        system("ansiweather -l Fortaleza > vento.txt");
         ifstream file("vento.txt");
         stream.assign( (istreambuf_iterator<char>(file)),
                        (istreambuf_iterator<char>()));
@@ -57,7 +60,7 @@ float parse_tempo(){
         int tempo_coeficiente[12];
         float chuva_porcentagem[12];
         float coeficiente;
-        system("curl wttr.in/'Campinas' > tempo.txt");
+        system("curl wttr.in/'Fortaleza' > tempo.txt");
 
         ifstream tempo("tempo.txt");
         chuva_porcentagem[0] = 0.0;
@@ -120,6 +123,11 @@ float parse_tempo(){
                 if(overcast != string::npos)
                 {
                         tempo_coeficiente[j] = 1;
+                        j++;
+                }
+                size_t moderate = stream.find("Moderate", 0);
+                if(moderate != string::npos) {
+                        tempo_coeficiente[j] = 2;
                         j++;
                 }
                 size_t found = stream.find('%');

@@ -30,15 +30,14 @@ int main(int argc, char *argv[]) {
         vector<jato> jatos;
         vector<sprinkler> sprinklers;
 
-        system("python read.py");
+        // system("python read.py");
 
         /* --- Variaveis de decisao */
         coeficiente = parse_tempo();
+        cout << coeficiente << endl;
         vento = get_vento();
         umidade = get_umidade();
-        cout << umidade << endl;
         insolacao = get_insolacao();
-        cout << insolacao << endl;
 
         /* Processamento de imagem */
         field = stich(argc, argv);
@@ -58,7 +57,7 @@ int main(int argc, char *argv[]) {
                         p.resultadoAnterior = get_resAnterior((*it).x/100, (*it).y/100, input);
                         p.corGrama = get_cor((*it).regado, (*it).dif_cor);
                         qtd_agua = state_machine(p);
-
+                        cout << qtd_agua << endl;
                         scalar = 255*qtd_agua/100;
                         circle(final_field, Point((*it).x, (*it).y), 10, Scalar(scalar, 0, 0), -1, 8);
 
@@ -84,7 +83,7 @@ int main(int argc, char *argv[]) {
         imwrite("x.jpg", final_field);
         remove("resAnterior");
         save_Angulos(jatos);
-        system("python send.py");
+        // system("python send.py");
         save_resAnterior(resultados, output);
 
         return 0;
