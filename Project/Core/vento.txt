@@ -1,0 +1,1 @@
+[44m[36;1m Current weather in Fortaleza [35m=>[33;1m 27 °C [37;1m☁ [34m-[36;1m Wind [35m=>[33;1m 8.2 m/s E [34m-[36;1m Humidity [35m=>[33;1m 78 % [34m-[36;1m Pressure [35m=>[33;1m 1012 hPa [0m

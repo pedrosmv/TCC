@@ -1,0 +1,4 @@
+Umi 1.34
+Umidade: 1023
+Insolacao: 1.34
+Umidade: 1023
