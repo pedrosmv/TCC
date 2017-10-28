@@ -1,0 +1,118 @@
+Coeficiente: 0.794872
+Velocidade do Vento: 7.2 m/s
+Umidade: 2
+Insolacao: 4.8
+
+O bloco sera regado
+Quantidade de agua: 10
+X: 2
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 4
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 2
+O bloco sera regado
+Quantidade de agua: 12
+X: 6
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 2
+O bloco sera regado
+Quantidade de agua: 13
+X: 8
+Y: 2
+
+Quantidade de agua: 0
+X: 2
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 4
+Y: 3
+O bloco sera regado
+Quantidade de agua: 13
+X: 5
+Y: 3
+O bloco sera regado
+Quantidade de agua: 12
+X: 6
+Y: 3
+O bloco sera regado
+Quantidade de agua: 14
+X: 7
+Y: 3
+O bloco sera regado
+Quantidade de agua: 13
+X: 8
+Y: 3
+
+O bloco sera regado
+Quantidade de agua: 10
+X: 2
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 4
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 4
+O bloco sera regado
+Quantidade de agua: 13
+X: 6
+Y: 4
+O bloco sera regado
+Quantidade de agua: 13
+X: 7
+Y: 4
+O bloco sera regado
+Quantidade de agua: 12
+X: 8
+Y: 4
+
+Quantidade de agua: 0
+X: 2
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 4
+Y: 5
+O bloco sera regado
+Quantidade de agua: 12
+X: 5
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 5
+O bloco sera regado
+Quantidade de agua: 12
+X: 7
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 5
