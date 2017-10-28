@@ -194,7 +194,7 @@ int get_umidade(){
 
         }
         //return ((umidade_valor*4)/1023);
-        return 4;
+        return 2.6;
 }
 
 /* Funcao responsavel por captar o valor que o sensor de insolacao retorna */
@@ -218,7 +218,7 @@ float get_insolacao(){
 
         }
         //return insolacao_valor;
-        return 1;
+        return 4.8;
 }
 
 /* Funcao que usa a diferença de cores entre o bloco e o minimo aceitavel para

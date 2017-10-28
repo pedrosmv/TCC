@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
         cout << "Insolacao: " << insolacao << endl;
 
         /* Processamento de imagem */
-        field = stich(argc, argv);
+        field = imread("field.jpg");
         grass_blocks = image_processing(field, max_col, max_linha);
         final_field = imread("final.jpg");
 
