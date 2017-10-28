@@ -1,0 +1,1651 @@
+0
+tempo: 3
+chuva: 2.8026e-45
+3
+tempo: 3
+chuva: 0
+6
+tempo: 3
+chuva: 0
+9
+tempo: 2
+chuva: 0
+11
+tempo: 2
+chuva: 0
+13
+tempo: 3
+chuva: 0
+16
+tempo: 3
+chuva: 0
+19
+tempo: 2
+chuva: 0
+21
+tempo: 2
+chuva: 0
+23
+tempo: 3
+chuva: 0
+26
+tempo: 3
+chuva: 0
+29
+tempo: 2
+chuva: 0
+Coeficiente: 0.794872
+Velocidade do Vento: 7.2 m/s
+Umidade: 4
+Insolacao: 1
+Quantidade de agua: 0
+X: 2
+Y: 0
+Quantidade de agua: 0
+X: 3
+Y: 0
+O bloco sera regado
+Quantidade de agua: 10
+X: 4
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 0
+O bloco sera regado
+Quantidade de agua: 10
+X: 7
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 12
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 0
+O bloco sera regado
+Quantidade de agua: 10
+X: 15
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 16
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 17
+Y: 0
+O bloco sera regado
+Quantidade de agua: 12
+X: 18
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 19
+Y: 0
+O bloco sera regado
+Quantidade de agua: 11
+X: 20
+Y: 0
+Quantidade de agua: 0
+X: 21
+Y: 0
+Quantidade de agua: 0
+X: 22
+Y: 0
+Quantidade de agua: 0
+X: 23
+Y: 0
+Quantidade de agua: 0
+X: 24
+Y: 0
+Quantidade de agua: 0
+X: 1
+Y: 1
+Quantidade de agua: 0
+X: 2
+Y: 1
+O bloco sera regado
+Quantidade de agua: 10
+X: 3
+Y: 1
+O bloco sera regado
+Quantidade de agua: 10
+X: 4
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 1
+O bloco sera regado
+Quantidade de agua: 10
+X: 8
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 12
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 1
+O bloco sera regado
+Quantidade de agua: 10
+X: 14
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 15
+Y: 1
+O bloco sera regado
+Quantidade de agua: 10
+X: 16
+Y: 1
+O bloco sera regado
+Quantidade de agua: 10
+X: 17
+Y: 1
+O bloco sera regado
+Quantidade de agua: 10
+X: 18
+Y: 1
+O bloco sera regado
+Quantidade de agua: 10
+X: 19
+Y: 1
+O bloco sera regado
+Quantidade de agua: 11
+X: 20
+Y: 1
+Quantidade de agua: 0
+X: 21
+Y: 1
+Quantidade de agua: 0
+X: 24
+Y: 1
+Quantidade de agua: 0
+X: 0
+Y: 2
+Quantidade de agua: 0
+X: 1
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 2
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 4
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 2
+O bloco sera regado
+Quantidade de agua: 12
+X: 6
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 2
+O bloco sera regado
+Quantidade de agua: 13
+X: 8
+Y: 2
+O bloco sera regado
+Quantidade de agua: 12
+X: 9
+Y: 2
+O bloco sera regado
+Quantidade de agua: 14
+X: 10
+Y: 2
+O bloco sera regado
+Quantidade de agua: 13
+X: 11
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 12
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 13
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 14
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 15
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 16
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 17
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 18
+Y: 2
+O bloco sera regado
+Quantidade de agua: 11
+X: 19
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 20
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 21
+Y: 2
+Quantidade de agua: 0
+X: 22
+Y: 2
+O bloco sera regado
+Quantidade de agua: 10
+X: 23
+Y: 2
+Quantidade de agua: 0
+X: 24
+Y: 2
+Quantidade de agua: 0
+X: 0
+Y: 3
+Quantidade de agua: 0
+X: 1
+Y: 3
+Quantidade de agua: 0
+X: 2
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 4
+Y: 3
+O bloco sera regado
+Quantidade de agua: 13
+X: 5
+Y: 3
+O bloco sera regado
+Quantidade de agua: 12
+X: 6
+Y: 3
+O bloco sera regado
+Quantidade de agua: 14
+X: 7
+Y: 3
+O bloco sera regado
+Quantidade de agua: 13
+X: 8
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 3
+O bloco sera regado
+Quantidade de agua: 12
+X: 11
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 12
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 3
+O bloco sera regado
+Quantidade de agua: 10
+X: 14
+Y: 3
+O bloco sera regado
+Quantidade de agua: 10
+X: 15
+Y: 3
+O bloco sera regado
+Quantidade de agua: 10
+X: 16
+Y: 3
+Quantidade de agua: 0
+X: 17
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 18
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 19
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 20
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 21
+Y: 3
+O bloco sera regado
+Quantidade de agua: 11
+X: 22
+Y: 3
+Quantidade de agua: 0
+X: 23
+Y: 3
+Quantidade de agua: 0
+X: 24
+Y: 3
+Quantidade de agua: 0
+X: 0
+Y: 4
+Quantidade de agua: 0
+X: 1
+Y: 4
+O bloco sera regado
+Quantidade de agua: 10
+X: 2
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 4
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 4
+O bloco sera regado
+Quantidade de agua: 13
+X: 6
+Y: 4
+O bloco sera regado
+Quantidade de agua: 13
+X: 7
+Y: 4
+O bloco sera regado
+Quantidade de agua: 12
+X: 8
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 12
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 4
+O bloco sera regado
+Quantidade de agua: 10
+X: 15
+Y: 4
+Quantidade de agua: 0
+X: 16
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 17
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 18
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 19
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 20
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 21
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 22
+Y: 4
+O bloco sera regado
+Quantidade de agua: 11
+X: 23
+Y: 4
+Quantidade de agua: 0
+X: 24
+Y: 4
+Quantidade de agua: 0
+X: 0
+Y: 5
+Quantidade de agua: 0
+X: 1
+Y: 5
+Quantidade de agua: 0
+X: 2
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 4
+Y: 5
+O bloco sera regado
+Quantidade de agua: 12
+X: 5
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 5
+O bloco sera regado
+Quantidade de agua: 12
+X: 7
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 5
+O bloco sera regado
+Quantidade de agua: 10
+X: 10
+Y: 5
+O bloco sera regado
+Quantidade de agua: 10
+X: 11
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 12
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 5
+Quantidade de agua: 0
+X: 15
+Y: 5
+Quantidade de agua: 0
+X: 16
+Y: 5
+Quantidade de agua: 0
+X: 17
+Y: 5
+Quantidade de agua: 0
+X: 18
+Y: 5
+Quantidade de agua: 0
+X: 19
+Y: 5
+Quantidade de agua: 0
+X: 20
+Y: 5
+O bloco sera regado
+Quantidade de agua: 11
+X: 21
+Y: 5
+Quantidade de agua: 0
+X: 22
+Y: 5
+Quantidade de agua: 0
+X: 23
+Y: 5
+Quantidade de agua: 0
+X: 24
+Y: 5
+Quantidade de agua: 0
+X: 0
+Y: 6
+Quantidade de agua: 0
+X: 1
+Y: 6
+Quantidade de agua: 0
+X: 2
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 4
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 6
+O bloco sera regado
+Quantidade de agua: 12
+X: 7
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 6
+O bloco sera regado
+Quantidade de agua: 10
+X: 12
+Y: 6
+O bloco sera regado
+Quantidade de agua: 10
+X: 13
+Y: 6
+Quantidade de agua: 0
+X: 14
+Y: 6
+Quantidade de agua: 0
+X: 15
+Y: 6
+Quantidade de agua: 0
+X: 16
+Y: 6
+Quantidade de agua: 0
+X: 17
+Y: 6
+Quantidade de agua: 0
+X: 18
+Y: 6
+Quantidade de agua: 0
+X: 19
+Y: 6
+Quantidade de agua: 0
+X: 20
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 21
+Y: 6
+O bloco sera regado
+Quantidade de agua: 11
+X: 22
+Y: 6
+O bloco sera regado
+Quantidade de agua: 10
+X: 23
+Y: 6
+O bloco sera regado
+Quantidade de agua: 10
+X: 24
+Y: 6
+Quantidade de agua: 0
+X: 0
+Y: 7
+Quantidade de agua: 0
+X: 1
+Y: 7
+Quantidade de agua: 0
+X: 2
+Y: 7
+Quantidade de agua: 0
+X: 3
+Y: 7
+Quantidade de agua: 0
+X: 4
+Y: 7
+Quantidade de agua: 0
+X: 5
+Y: 7
+O bloco sera regado
+Quantidade de agua: 10
+X: 6
+Y: 7
+Quantidade de agua: 0
+X: 7
+Y: 7
+O bloco sera regado
+Quantidade de agua: 10
+X: 8
+Y: 7
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 7
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 7
+O bloco sera regado
+Quantidade de agua: 10
+X: 11
+Y: 7
+Quantidade de agua: 0
+X: 12
+Y: 7
+Quantidade de agua: 0
+X: 13
+Y: 7
+Quantidade de agua: 0
+X: 14
+Y: 7
+Quantidade de agua: 0
+X: 15
+Y: 7
+Quantidade de agua: 0
+X: 16
+Y: 7
+Quantidade de agua: 0
+X: 17
+Y: 7
+Quantidade de agua: 0
+X: 18
+Y: 7
+Quantidade de agua: 0
+X: 19
+Y: 7
+Quantidade de agua: 0
+X: 20
+Y: 7
+Quantidade de agua: 0
+X: 21
+Y: 7
+Quantidade de agua: 0
+X: 22
+Y: 7
+Quantidade de agua: 0
+X: 23
+Y: 7
+Quantidade de agua: 0
+X: 24
+Y: 7
+Quantidade de agua: 0
+X: 0
+Y: 8
+Quantidade de agua: 0
+X: 1
+Y: 8
+Quantidade de agua: 0
+X: 2
+Y: 8
+O bloco sera regado
+Quantidade de agua: 10
+X: 3
+Y: 8
+Quantidade de agua: 0
+X: 4
+Y: 8
+Quantidade de agua: 0
+X: 5
+Y: 8
+Quantidade de agua: 0
+X: 6
+Y: 8
+O bloco sera regado
+Quantidade de agua: 10
+X: 7
+Y: 8
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 8
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 8
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 8
+O bloco sera regado
+Quantidade de agua: 10
+X: 11
+Y: 8
+Quantidade de agua: 0
+X: 12
+Y: 8
+Quantidade de agua: 0
+X: 13
+Y: 8
+Quantidade de agua: 0
+X: 14
+Y: 8
+Quantidade de agua: 0
+X: 15
+Y: 8
+Quantidade de agua: 0
+X: 16
+Y: 8
+Quantidade de agua: 0
+X: 17
+Y: 8
+Quantidade de agua: 0
+X: 18
+Y: 8
+Quantidade de agua: 0
+X: 19
+Y: 8
+Quantidade de agua: 0
+X: 20
+Y: 8
+Quantidade de agua: 0
+X: 21
+Y: 8
+Quantidade de agua: 0
+X: 22
+Y: 8
+Quantidade de agua: 0
+X: 0
+Y: 9
+Quantidade de agua: 0
+X: 1
+Y: 9
+O bloco sera regado
+Quantidade de agua: 10
+X: 2
+Y: 9
+Quantidade de agua: 0
+X: 3
+Y: 9
+Quantidade de agua: 0
+X: 4
+Y: 9
+O bloco sera regado
+Quantidade de agua: 10
+X: 5
+Y: 9
+Quantidade de agua: 0
+X: 6
+Y: 9
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 9
+O bloco sera regado
+Quantidade de agua: 12
+X: 8
+Y: 9
+O bloco sera regado
+Quantidade de agua: 12
+X: 9
+Y: 9
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 9
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 9
+O bloco sera regado
+Quantidade de agua: 10
+X: 12
+Y: 9
+O bloco sera regado
+Quantidade de agua: 10
+X: 13
+Y: 9
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 9
+Quantidade de agua: 0
+X: 15
+Y: 9
+Quantidade de agua: 0
+X: 16
+Y: 9
+O bloco sera regado
+Quantidade de agua: 10
+X: 17
+Y: 9
+Quantidade de agua: 0
+X: 18
+Y: 9
+Quantidade de agua: 0
+X: 19
+Y: 9
+Quantidade de agua: 0
+X: 20
+Y: 9
+Quantidade de agua: 0
+X: 21
+Y: 9
+Quantidade de agua: 0
+X: 22
+Y: 9
+Quantidade de agua: 0
+X: 24
+Y: 9
+O bloco sera regado
+Quantidade de agua: 10
+X: 0
+Y: 10
+O bloco sera regado
+Quantidade de agua: 10
+X: 1
+Y: 10
+O bloco sera regado
+Quantidade de agua: 10
+X: 2
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 10
+Quantidade de agua: 0
+X: 4
+Y: 10
+Quantidade de agua: 0
+X: 5
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 10
+O bloco sera regado
+Quantidade de agua: 10
+X: 12
+Y: 10
+O bloco sera regado
+Quantidade de agua: 10
+X: 13
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 15
+Y: 10
+O bloco sera regado
+Quantidade de agua: 10
+X: 16
+Y: 10
+Quantidade de agua: 0
+X: 17
+Y: 10
+Quantidade de agua: 0
+X: 18
+Y: 10
+Quantidade de agua: 0
+X: 19
+Y: 10
+Quantidade de agua: 0
+X: 20
+Y: 10
+Quantidade de agua: 0
+X: 21
+Y: 10
+Quantidade de agua: 0
+X: 22
+Y: 10
+Quantidade de agua: 0
+X: 23
+Y: 10
+Quantidade de agua: 0
+X: 24
+Y: 10
+O bloco sera regado
+Quantidade de agua: 11
+X: 0
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 1
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 2
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 3
+Y: 11
+Quantidade de agua: 0
+X: 4
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 12
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 15
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 16
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 17
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 18
+Y: 11
+Quantidade de agua: 0
+X: 19
+Y: 11
+Quantidade de agua: 0
+X: 23
+Y: 11
+O bloco sera regado
+Quantidade de agua: 11
+X: 0
+Y: 12
+O bloco sera regado
+Quantidade de agua: 10
+X: 1
+Y: 12
+Quantidade de agua: 0
+X: 2
+Y: 12
+Quantidade de agua: 0
+X: 3
+Y: 12
+Quantidade de agua: 0
+X: 4
+Y: 12
+O bloco sera regado
+Quantidade de agua: 12
+X: 5
+Y: 12
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 12
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 12
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 12
+O bloco sera regado
+Quantidade de agua: 12
+X: 9
+Y: 12
+O bloco sera regado
+Quantidade de agua: 12
+X: 10
+Y: 12
+O bloco sera regado
+Quantidade de agua: 12
+X: 11
+Y: 12
+O bloco sera regado
+Quantidade de agua: 12
+X: 12
+Y: 12
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 12
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 12
+O bloco sera regado
+Quantidade de agua: 11
+X: 15
+Y: 12
+O bloco sera regado
+Quantidade de agua: 10
+X: 16
+Y: 12
+O bloco sera regado
+Quantidade de agua: 11
+X: 17
+Y: 12
+O bloco sera regado
+Quantidade de agua: 11
+X: 18
+Y: 12
+Quantidade de agua: 0
+X: 19
+Y: 12
+O bloco sera regado
+Quantidade de agua: 10
+X: 20
+Y: 12
+Quantidade de agua: 0
+X: 21
+Y: 12
+Quantidade de agua: 0
+X: 22
+Y: 12
+Quantidade de agua: 0
+X: 23
+Y: 12
+Quantidade de agua: 0
+X: 24
+Y: 12
+Quantidade de agua: 0
+X: 0
+Y: 13
+Quantidade de agua: 0
+X: 1
+Y: 13
+Quantidade de agua: 0
+X: 2
+Y: 13
+Quantidade de agua: 0
+X: 3
+Y: 13
+Quantidade de agua: 0
+X: 4
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 5
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 13
+O bloco sera regado
+Quantidade de agua: 12
+X: 12
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 15
+Y: 13
+O bloco sera regado
+Quantidade de agua: 11
+X: 16
+Y: 13
+O bloco sera regado
+Quantidade de agua: 10
+X: 17
+Y: 13
+O bloco sera regado
+Quantidade de agua: 10
+X: 18
+Y: 13
+O bloco sera regado
+Quantidade de agua: 10
+X: 19
+Y: 13
+O bloco sera regado
+Quantidade de agua: 10
+X: 20
+Y: 13
+Quantidade de agua: 0
+X: 21
+Y: 13
+Quantidade de agua: 0
+X: 22
+Y: 13
+Quantidade de agua: 0
+X: 23
+Y: 13
+Quantidade de agua: 0
+X: 0
+Y: 14
+Quantidade de agua: 0
+X: 1
+Y: 14
+Quantidade de agua: 0
+X: 2
+Y: 14
+Quantidade de agua: 0
+X: 3
+Y: 14
+Quantidade de agua: 0
+X: 4
+Y: 14
+O bloco sera regado
+Quantidade de agua: 10
+X: 5
+Y: 14
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 14
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 14
+O bloco sera regado
+Quantidade de agua: 10
+X: 8
+Y: 14
+Quantidade de agua: 0
+X: 9
+Y: 14
+Quantidade de agua: 0
+X: 10
+Y: 14
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 14
+O bloco sera regado
+Quantidade de agua: 13
+X: 12
+Y: 14
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 14
+O bloco sera regado
+Quantidade de agua: 10
+X: 14
+Y: 14
+O bloco sera regado
+Quantidade de agua: 11
+X: 15
+Y: 14
+O bloco sera regado
+Quantidade de agua: 11
+X: 16
+Y: 14
+O bloco sera regado
+Quantidade de agua: 11
+X: 17
+Y: 14
+Quantidade de agua: 0
+X: 18
+Y: 14
+Quantidade de agua: 0
+X: 19
+Y: 14
+Quantidade de agua: 0
+X: 20
+Y: 14
+Quantidade de agua: 0
+X: 21
+Y: 14
+Quantidade de agua: 0
+X: 22
+Y: 14
+Quantidade de agua: 0
+X: 23
+Y: 14
+Quantidade de agua: 0
+X: 0
+Y: 15
+Quantidade de agua: 0
+X: 1
+Y: 15
+Quantidade de agua: 0
+X: 3
+Y: 15
+Quantidade de agua: 0
+X: 5
+Y: 15
+Quantidade de agua: 0
+X: 6
+Y: 15
+Quantidade de agua: 0
+X: 7
+Y: 15
+Quantidade de agua: 0
+X: 8
+Y: 15
+Quantidade de agua: 0
+X: 9
+Y: 15
+O bloco sera regado
+Quantidade de agua: 11
+X: 10
+Y: 15
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 15
+O bloco sera regado
+Quantidade de agua: 13
+X: 12
+Y: 15
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 15
+O bloco sera regado
+Quantidade de agua: 11
+X: 14
+Y: 15
+O bloco sera regado
+Quantidade de agua: 11
+X: 15
+Y: 15
+Quantidade de agua: 0
+X: 16
+Y: 15
+Quantidade de agua: 0
+X: 17
+Y: 15
+Quantidade de agua: 0
+X: 18
+Y: 15
+Quantidade de agua: 0
+X: 19
+Y: 15
+Quantidade de agua: 0
+X: 20
+Y: 15
+Quantidade de agua: 0
+X: 21
+Y: 15
+Quantidade de agua: 0
+X: 22
+Y: 15
+Quantidade de agua: 0
+X: 23
+Y: 15
+Quantidade de agua: 0
+X: 0
+Y: 16
+Quantidade de agua: 0
+X: 1
+Y: 16
+Quantidade de agua: 0
+X: 2
+Y: 16
+Quantidade de agua: 0
+X: 3
+Y: 16
+Quantidade de agua: 0
+X: 4
+Y: 16
+Quantidade de agua: 0
+X: 5
+Y: 16
+Quantidade de agua: 0
+X: 6
+Y: 16
+Quantidade de agua: 0
+X: 7
+Y: 16
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 16
+O bloco sera regado
+Quantidade de agua: 11
+X: 9
+Y: 16
+O bloco sera regado
+Quantidade de agua: 10
+X: 10
+Y: 16
+O bloco sera regado
+Quantidade de agua: 11
+X: 11
+Y: 16
+O bloco sera regado
+Quantidade de agua: 12
+X: 12
+Y: 16
+O bloco sera regado
+Quantidade de agua: 11
+X: 13
+Y: 16
+O bloco sera regado
+Quantidade de agua: 10
+X: 14
+Y: 16
+Quantidade de agua: 0
+X: 15
+Y: 16
+O bloco sera regado
+Quantidade de agua: 10
+X: 16
+Y: 16
+O bloco sera regado
+Quantidade de agua: 10
+X: 17
+Y: 16
+Quantidade de agua: 0
+X: 18
+Y: 16
+Quantidade de agua: 0
+X: 19
+Y: 16
+Quantidade de agua: 0
+X: 20
+Y: 16
+Quantidade de agua: 0
+X: 21
+Y: 16
+Quantidade de agua: 0
+X: 22
+Y: 16
+Quantidade de agua: 0
+X: 23
+Y: 16
+Quantidade de agua: 0
+X: 24
+Y: 16
+Quantidade de agua: 0
+X: 0
+Y: 17
+Quantidade de agua: 0
+X: 1
+Y: 17
+Quantidade de agua: 0
+X: 2
+Y: 17
+Quantidade de agua: 0
+X: 3
+Y: 17
+Quantidade de agua: 0
+X: 4
+Y: 17
+Quantidade de agua: 0
+X: 5
+Y: 17
+Quantidade de agua: 0
+X: 6
+Y: 17
+O bloco sera regado
+Quantidade de agua: 14
+X: 7
+Y: 17
+O bloco sera regado
+Quantidade de agua: 11
+X: 8
+Y: 17
+Quantidade de agua: 0
+X: 9
+Y: 17
+Quantidade de agua: 0
+X: 10
+Y: 17
+Quantidade de agua: 0
+X: 11
+Y: 17
+Quantidade de agua: 0
+X: 12
+Y: 17
+Quantidade de agua: 0
+X: 13
+Y: 17
+Quantidade de agua: 0
+X: 14
+Y: 17
+Quantidade de agua: 0
+X: 15
+Y: 17
+Quantidade de agua: 0
+X: 16
+Y: 17
+Quantidade de agua: 0
+X: 17
+Y: 17
+Quantidade de agua: 0
+X: 18
+Y: 17
+O bloco sera regado
+Quantidade de agua: 10
+X: 19
+Y: 17
+O bloco sera regado
+Quantidade de agua: 10
+X: 20
+Y: 17
+Quantidade de agua: 0
+X: 21
+Y: 17
+Quantidade de agua: 0
+X: 22
+Y: 17
+Quantidade de agua: 0
+X: 1
+Y: 18
+O bloco sera regado
+Quantidade de agua: 10
+X: 2
+Y: 18
+Quantidade de agua: 0
+X: 3
+Y: 18
+O bloco sera regado
+Quantidade de agua: 11
+X: 4
+Y: 18
+O bloco sera regado
+Quantidade de agua: 10
+X: 5
+Y: 18
+O bloco sera regado
+Quantidade de agua: 11
+X: 6
+Y: 18
+O bloco sera regado
+Quantidade de agua: 11
+X: 7
+Y: 18
+O bloco sera regado
+Quantidade de agua: 10
+X: 8
+Y: 18
+Quantidade de agua: 0
+X: 9
+Y: 18
+O bloco sera regado
+Quantidade de agua: 10
+X: 10
+Y: 18
+Quantidade de agua: 0
+X: 11
+Y: 18
+Quantidade de agua: 0
+X: 12
+Y: 18
+Quantidade de agua: 0
+X: 13
+Y: 18
+Quantidade de agua: 0
+X: 14
+Y: 18
+Quantidade de agua: 0
+X: 15
+Y: 18
+Quantidade de agua: 0
+X: 16
+Y: 18
+Quantidade de agua: 0
+X: 17
+Y: 18
+Quantidade de agua: 0
+X: 18
+Y: 18
+Quantidade de agua: 0
+X: 19
+Y: 18
+Quantidade de agua: 0
+X: 20
+Y: 18
+Quantidade de agua: 0
+X: 21
+Y: 18
+Quantidade de agua: 0
+X: 22
+Y: 18
+Quantidade de agua: 0
+X: 23
+Y: 18

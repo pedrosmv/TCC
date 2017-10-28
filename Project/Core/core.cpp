@@ -34,10 +34,12 @@ int main(int argc, char *argv[]) {
 
         /* --- Variaveis de decisao */
         coeficiente = parse_tempo();
-        cout << coeficiente << endl;
+        cout << "Coeficiente: " << coeficiente << endl;
         vento = get_vento();
         umidade = get_umidade();
+        cout << "Umidade: " << umidade << endl;
         insolacao = get_insolacao();
+        cout << "Insolacao: " << insolacao << endl;
 
         /* Processamento de imagem */
         field = stich(argc, argv);
@@ -57,13 +59,14 @@ int main(int argc, char *argv[]) {
                         p.resultadoAnterior = get_resAnterior((*it).x/100, (*it).y/100, input);
                         p.corGrama = get_cor((*it).regado, (*it).dif_cor);
                         qtd_agua = state_machine(p);
-                        cout << qtd_agua << endl;
                         scalar = 255*qtd_agua/100;
                         circle(final_field, Point((*it).x, (*it).y), 10, Scalar(scalar, 0, 0), -1, 8);
 
                         resultados.push_back(block_result());
                         resultados[i].x = (*it).x/100;
+                        cout << "X: " << resultados[i].x << endl;
                         resultados[i].y = (*it).y/100;
+                        cout << "Y: " << resultados[i].y << endl;
                         resultados[i].qtd_agua = qtd_agua;
                         jatos.push_back(get_jato(sprinklers, resultados[i]));
                         i++;
