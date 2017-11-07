@@ -1,0 +1,150 @@
+Coeficiente: 0.794872
+Velocidade do Vento: 7.2 m/s
+Umidade: 2
+Insolacao: 4.8
+
+
+O bloco sera regado
+Quantidade de agua: 50
+X: 2
+Y: 2
+O bloco sera regado
+Quantidade de agua: 51
+X: 3
+Y: 2
+O bloco sera regado
+Quantidade de agua: 49
+X: 4
+Y: 2
+O bloco sera regado
+Quantidade de agua: 55
+X: 5
+Y: 2
+O bloco sera regado
+Quantidade de agua: 58
+X: 6
+Y: 2
+O bloco sera regado
+Quantidade de agua: 57
+X: 7
+Y: 2
+O bloco sera regado
+Quantidade de agua: 63
+X: 8
+Y: 2
+
+O bloco sera regado
+Quantidade de agua: 46
+X: 2
+Y: 3
+O bloco sera regado
+Quantidade de agua: 53
+X: 3
+Y: 3
+O bloco sera regado
+Quantidade de agua: 53
+X: 4
+Y: 3
+O bloco sera regado
+Quantidade de agua: 62
+X: 5
+Y: 3
+O bloco sera regado
+Quantidade de agua: 59
+X: 6
+Y: 3
+O bloco sera regado
+Quantidade de agua: 66
+X: 7
+Y: 3
+O bloco sera regado
+Quantidade de agua: 62
+X: 8
+Y: 3
+
+O bloco sera regado
+Quantidade de agua: 49
+X: 2
+Y: 4
+O bloco sera regado
+Quantidade de agua: 54
+X: 3
+Y: 4
+O bloco sera regado
+Quantidade de agua: 56
+X: 4
+Y: 4
+O bloco sera regado
+Quantidade de agua: 56
+X: 5
+Y: 4
+O bloco sera regado
+Quantidade de agua: 63
+X: 6
+Y: 4
+O bloco sera regado
+Quantidade de agua: 65
+X: 7
+Y: 4
+O bloco sera regado
+Quantidade de agua: 60
+X: 8
+Y: 4
+
+O bloco sera regado
+Quantidade de agua: 42
+X: 2
+Y: 5
+O bloco sera regado
+Quantidade de agua: 50
+X: 3
+Y: 5
+O bloco sera regado
+Quantidade de agua: 56
+X: 4
+Y: 5
+O bloco sera regado
+Quantidade de agua: 60
+X: 5
+Y: 5
+O bloco sera regado
+Quantidade de agua: 58
+X: 6
+Y: 5
+O bloco sera regado
+Quantidade de agua: 60
+X: 7
+Y: 5
+O bloco sera regado
+Quantidade de agua: 56
+X: 8
+Y: 5
+
+O bloco sera regado
+Quantidade de agua: 44
+X: 2
+Y: 6
+O bloco sera regado
+Quantidade de agua: 50
+X: 3
+Y: 6
+O bloco sera regado
+Quantidade de agua: 50
+X: 4
+Y: 6
+O bloco sera regado
+Quantidade de agua: 54
+X: 5
+Y: 6
+O bloco sera regado
+Quantidade de agua: 57
+X: 6
+Y: 6
+O bloco sera regado
+Quantidade de agua: 62
+X: 7
+Y: 6
+O bloco sera regado
+Quantidade de agua: 51
+X: 8
+Y: 6

@@ -42,7 +42,7 @@ float find_wind(){
                 resultado = match[0];
                 start = match[0].second;
         }
-        cout << resultado << endl;
+        cout << "Velocidade do Vento: " << resultado << endl;
         vento = stof(resultado);
         file.close();
         return vento = vento * 3.6;
@@ -193,7 +193,8 @@ int get_umidade(){
                 }
 
         }
-        return ((umidade_valor*4)/1023);
+        //return ((umidade_valor*4)/1023);
+        return 2.6;
 }
 
 /* Funcao responsavel por captar o valor que o sensor de insolacao retorna */
@@ -216,7 +217,8 @@ float get_insolacao(){
                 }
 
         }
-        return insolacao_valor;
+        //return insolacao_valor;
+        return 4.8;
 }
 
 /* Funcao que usa a diferença de cores entre o bloco e o minimo aceitavel para
@@ -257,6 +259,7 @@ int state_machine(parameters param_dia){
                         estado_atual = CALC;
                 case CALC:
                         if(decisao > 10) {
+                                cout << "O bloco sera regado" << endl;
                                 estado_atual = REGA;
                         }
                         else {
@@ -266,11 +269,13 @@ int state_machine(parameters param_dia){
 
                 case REGA:
                         qtd_agua = decisao;
+                        cout << "Quantidade de agua: " << qtd_agua << endl;
                         estado_atual = FIM;
                         break;
 
                 case NAOREGA:
                         qtd_agua = 0;
+                        cout << "Quantidade de agua: " << qtd_agua << endl;
                         estado_atual = FIM;
                         break;
 
