@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
         }
 
         imwrite("x.jpg", final_field);
-        imshow("Final Result", final_field)
+        imshow("Final Result", final_field);
         remove("resAnterior");
         save_Angulos(jatos);
         // system("python send.py");
